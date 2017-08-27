@@ -100,4 +100,3 @@ using namespace cv;
 
 void prompt_and_exit(int status);
 void print_message_to_file(FILE *fp, char message[]);
-void detectAndDisplay( Mat frame );
