@@ -1,0 +1,7 @@
+C:/ACV/assignments/ACV-assignments/assignment0/build/CMakeFiles/INSTALL.dir
+C:/ACV/assignments/ACV-assignments/assignment0/build/CMakeFiles/ALL_BUILD.dir
+C:/ACV/assignments/ACV-assignments/assignment0/build/CMakeFiles/ZERO_CHECK.dir
+C:/ACV/assignments/ACV-assignments/assignment0/build/src/CMakeFiles/INSTALL.dir
+C:/ACV/assignments/ACV-assignments/assignment0/build/src/dmarew/CMakeFiles/dmarew.dir
+C:/ACV/assignments/ACV-assignments/assignment0/build/src/dmarew/CMakeFiles/INSTALL.dir
+C:/ACV/assignments/ACV-assignments/assignment0/build/src/dmarew/CMakeFiles/ALL_BUILD.dir
