@@ -1,0 +1,21 @@
+﻿Build started 9/21/2017 2:27:15 PM.
+     1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\kmeansSmartiesCounter\kmeansSmartiesCounter.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "kmeansSmartiesCounter.dir\Debug\kmeansSmartiesCounter.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         Building Custom Rule C:/ACV/assignments/ACV-assignments/assignment1/src/kmeansSmartiesCounter/CMakeLists.txt
+         CMake does not need to re-run because C:\ACV\assignments\ACV-assignments\assignment1\build\src\kmeansSmartiesCounter\CMakeFiles\generate.stamp is up-to-date.
+       MakeDirsForCl:
+         Creating directory "C:\ACV\assignments\ACV-assignments\assignment1\build\src\kmeansSmartiesCounter\Debug".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\opencv\build\include /IC:\opencv\build\include\opencv /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"kmeansSmartiesCounter.dir\Debug\\" /Fd"kmeansSmartiesCounter.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\kmeansSmartiesCounter\kmeansSmartiesCounterApplication.cpp ..\..\..\src\kmeansSmartiesCounter\kmeansSmartiesCounterImplementation.cpp
+         kmeansSmartiesCounterApplication.cpp
+     1>..\..\..\src\kmeansSmartiesCounter\kmeansSmartiesCounterApplication.cpp(3): fatal error C1083: Cannot open include file: 'countingSmarties.h': No such file or directory
+         kmeansSmartiesCounterImplementation.cpp
+     1>..\..\..\src\kmeansSmartiesCounter\kmeansSmartiesCounterImplementation.cpp(3): fatal error C1083: Cannot open include file: 'countingSmarties.h': No such file or directory
+         Generating Code...
+     1>Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\kmeansSmartiesCounter\kmeansSmartiesCounter.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.48

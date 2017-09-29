@@ -1,0 +1,5 @@
+../data/assignment1A.jpg
+../data/assignment1B.jpg
+../data/test1.jpg
+../data/test2.png
+../data/Smarties2.jpg

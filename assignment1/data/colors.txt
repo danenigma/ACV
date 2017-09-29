@@ -1,0 +1,8 @@
+red 171
+orange 14
+brown 6
+purple 155
+green 36
+lemon 27
+light blue 103
+purplish blue 123

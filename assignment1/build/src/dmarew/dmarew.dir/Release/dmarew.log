@@ -1,0 +1,29 @@
+﻿Build started 9/22/2017 11:17:41 AM.
+     1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\dmarew\dmarew.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "dmarew.dir\Release\dmarew.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         Building Custom Rule C:/ACV/assignments/ACV-assignments/assignment1/src/dmarew/CMakeLists.txt
+         CMake does not need to re-run because C:\ACV\assignments\ACV-assignments\assignment1\build\src\dmarew\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\opencv\build\include /IC:\opencv\build\include\opencv /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_DEPRECATE /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"dmarew.dir\Release\\" /Fd"dmarew.dir\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\dmarew\countingSmartiesApplication.cpp ..\..\..\src\dmarew\countingSmartiesImplementation.cpp
+         countingSmartiesApplication.cpp
+     1>..\..\..\src\dmarew\countingSmartiesApplication.cpp(13): warning C4101: 'fp_out' : unreferenced local variable
+         countingSmartiesImplementation.cpp
+     1>..\..\..\src\dmarew\countingSmartiesImplementation.cpp(44): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\src\dmarew\countingSmartiesImplementation.cpp(49): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\Release\dmarew.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib C:\opencv\build\x86\vc10\lib\opencv_videostab2410.lib C:\opencv\build\x86\vc10\lib\opencv_ts2410.lib C:\opencv\build\x86\vc10\lib\opencv_superres2410.lib C:\opencv\build\x86\vc10\lib\opencv_stitching2410.lib C:\opencv\build\x86\vc10\lib\opencv_contrib2410.lib C:\opencv\build\x86\vc10\lib\opencv_nonfree2410.lib C:\opencv\build\x86\vc10\lib\opencv_ocl2410.lib C:\opencv\build\x86\vc10\lib\opencv_gpu2410.lib C:\opencv\build\x86\vc10\lib\opencv_photo2410.lib C:\opencv\build\x86\vc10\lib\opencv_objdetect2410.lib C:\opencv\build\x86\vc10\lib\opencv_legacy2410.lib C:\opencv\build\x86\vc10\lib\opencv_video2410.lib C:\opencv\build\x86\vc10\lib\opencv_ml2410.lib C:\opencv\build\x86\vc10\lib\opencv_calib3d2410.lib C:\opencv\build\x86\vc10\lib\opencv_features2d2410.lib C:\opencv\build\x86\vc10\lib\opencv_highgui2410.lib C:\opencv\build\x86\vc10\lib\opencv_imgproc2410.lib C:\opencv\build\x86\vc10\lib\opencv_flann2410.lib C:\opencv\build\x86\vc10\lib\opencv_core2410.lib /NODEFAULTLIB:"libc;libcmt.lib;libcmtd.lib" /MANIFEST /ManifestFile:"dmarew.dir\Release\dmarew.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/Release/dmarew.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/Release/dmarew.lib" /MACHINE:X86 dmarew.dir\Release\countingSmartiesApplication.obj
+         dmarew.dir\Release\countingSmartiesImplementation.obj  /machine:X86 
+         dmarew.vcxproj -> C:\ACV\assignments\ACV-assignments\assignment1\build\Release\dmarew.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\ACV\assignments\ACV-assignments\assignment1\build\Release\dmarew.exe;#1" /manifest dmarew.dir\Release\dmarew.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "dmarew.dir\Release\dmarew.unsuccessfulbuild".
+         Touching "dmarew.dir\Release\dmarew.lastbuildstate".
+     1>Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\dmarew\dmarew.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.10
