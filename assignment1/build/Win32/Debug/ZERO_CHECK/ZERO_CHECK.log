@@ -1,4 +1,4 @@
-﻿Build started 9/21/2017 2:27:15 PM.
+﻿Build started 10/4/2017 12:23:04 PM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\ZERO_CHECK.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Win32\Debug\ZERO_CHECK\ZERO_CHECK.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -11,4 +11,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.03
+Time Elapsed 00:00:00.05

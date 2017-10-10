@@ -2,3 +2,4 @@ C:/ACV/assignments/ACV-assignments/assignment1/bin/dmarew.exe
 C:/ACV/assignments/ACV-assignments/assignment1/bin/colourSegmentation.exe
 C:/ACV/assignments/ACV-assignments/assignment1/bin/kmeansSmartiesCounter.exe
 C:/ACV/assignments/ACV-assignments/assignment1/bin/morphologySmartiesCounter.exe
+C:/ACV/assignments/ACV-assignments/assignment1/bin/smartiesCounter.exe

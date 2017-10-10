@@ -173,6 +173,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment1/build/src/morphologySmartiesCounter/morphologySmartiesCounter.vcxproj">
       <Project>DD258CD8-8C27-31F9-BBAA-45EE57209C93</Project>
     </ProjectReference>
+    <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment1/build/src/smartiesCounter/smartiesCounter.vcxproj">
+      <Project>644B4A6F-3910-3452-95E4-203BCD03EEA2</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

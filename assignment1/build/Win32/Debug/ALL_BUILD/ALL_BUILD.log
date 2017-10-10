@@ -1,5 +1,5 @@
-﻿Build started 9/21/2017 2:27:16 PM.
-     1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\ALL_BUILD.vcxproj" on node 2 (build target(s)).
+﻿Build started 10/4/2017 12:23:13 PM.
+     1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\ALL_BUILD.vcxproj" on node 4 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Win32\Debug\ALL_BUILD\ALL_BUILD.unsuccessfulbuild" because "AlwaysCreate" was specified.
        CustomBuild:
@@ -11,4 +11,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.10
+Time Elapsed 00:00:00.09

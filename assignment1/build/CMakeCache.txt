@@ -167,12 +167,6 @@ OpenCV_LIB_DIR_DBG:PATH=C:/opencv/build/x86/vc10/lib
 OpenCV_LIB_DIR_OPT:PATH=C:/opencv/build/x86/vc10/lib
 
 //Value Computed by CMake
-assignment0_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment1/build
-
-//Value Computed by CMake
-assignment0_SOURCE_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment1
-
-//Value Computed by CMake
 assignment1_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment1/build
 
 //Value Computed by CMake
@@ -191,12 +185,6 @@ dmarew_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment1/build/sr
 dmarew_SOURCE_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment1/src/dmarew
 
 //Value Computed by CMake
-histogram_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment1/build/src/histogram
-
-//Value Computed by CMake
-histogram_SOURCE_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment1/src/histogram
-
-//Value Computed by CMake
 kmeansSmartiesCounter_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment1/build/src/kmeansSmartiesCounter
 
 //Value Computed by CMake
@@ -207,6 +195,12 @@ morphologySmartiesCounter_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/a
 
 //Value Computed by CMake
 morphologySmartiesCounter_SOURCE_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment1/src/morphologySmartiesCounter
+
+//Value Computed by CMake
+smartiesCounter_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment1/build/src/smartiesCounter
+
+//Value Computed by CMake
+smartiesCounter_SOURCE_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment1/src/smartiesCounter
 
 
 ########################
@@ -287,7 +281,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_RC_COMPILER
 CMAKE_RC_COMPILER-ADVANCED:INTERNAL=1
 CMAKE_RC_COMPILER_WORKS:INTERNAL=1

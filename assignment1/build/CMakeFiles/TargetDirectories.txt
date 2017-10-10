@@ -14,3 +14,6 @@ C:/ACV/assignments/ACV-assignments/assignment1/build/src/kmeansSmartiesCounter/C
 C:/ACV/assignments/ACV-assignments/assignment1/build/src/morphologySmartiesCounter/CMakeFiles/morphologySmartiesCounter.dir
 C:/ACV/assignments/ACV-assignments/assignment1/build/src/morphologySmartiesCounter/CMakeFiles/INSTALL.dir
 C:/ACV/assignments/ACV-assignments/assignment1/build/src/morphologySmartiesCounter/CMakeFiles/ALL_BUILD.dir
+C:/ACV/assignments/ACV-assignments/assignment1/build/src/smartiesCounter/CMakeFiles/smartiesCounter.dir
+C:/ACV/assignments/ACV-assignments/assignment1/build/src/smartiesCounter/CMakeFiles/INSTALL.dir
+C:/ACV/assignments/ACV-assignments/assignment1/build/src/smartiesCounter/CMakeFiles/ALL_BUILD.dir

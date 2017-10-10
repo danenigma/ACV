@@ -1,14 +1,23 @@
-﻿Build started 9/26/2017 2:19:38 PM.
-     1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\ZERO_CHECK.vcxproj" on node 2 (build target(s)).
-     1>InitializeBuildStatus:
+﻿Build started 10/9/2017 1:35:27 PM.
+     1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\ZERO_CHECK.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Win32\Release\ZERO_CHECK\ZERO_CHECK.lastbuildstate".
+       InitializeBuildStatus:
          Creating "Win32\Release\ZERO_CHECK\ZERO_CHECK.unsuccessfulbuild" because "AlwaysCreate" was specified.
        CustomBuild:
-         All outputs are up-to-date.
+         Checking Build System
+         CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment1/build/src/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment1/build/src/dmarew/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment1/build/src/colourSegmentation/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment1/build/src/kmeansSmartiesCounter/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment1/build/src/morphologySmartiesCounter/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment1/build/src/smartiesCounter/CMakeFiles/generate.stamp is up-to-date.
        FinalizeBuildStatus:
          Deleting file "Win32\Release\ZERO_CHECK\ZERO_CHECK.unsuccessfulbuild".
          Touching "Win32\Release\ZERO_CHECK\ZERO_CHECK.lastbuildstate".
-     1>Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\ZERO_CHECK.vcxproj" (build target(s)).
+     1>Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\ZERO_CHECK.vcxproj" (rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.24
+Time Elapsed 00:00:00.35

@@ -1,0 +1,38 @@
+﻿Build started 10/5/2017 12:24:41 PM.
+     1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\watershed_and_distance_transform\watershed_and_distance_transform.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "watershed_and_distance_transform.dir\Release\watershed_and_distance_transform.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         Building Custom Rule C:/ACV/assignments/ACV-assignments/assignment1/src/watershed_and_distance_transform/CMakeLists.txt
+         CMake is re-running because C:\ACV\assignments\ACV-assignments\assignment1\build\src\watershed_and_distance_transform\CMakeFiles\generate.stamp is out-of-date.
+           the file 'C:/ACV/assignments/ACV-assignments/assignment1/src/watershed_and_distance_transform/CMakeLists.txt'
+           is newer than 'C:\ACV\assignments\ACV-assignments\assignment1\build\src\watershed_and_distance_transform\CMakeFiles\generate.stamp.depend'
+           result='0'
+         -- OpenCV ARCH: x86
+         -- OpenCV RUNTIME: vc10
+         -- OpenCV STATIC: OFF
+         -- Found OpenCV 2.4.10 in C:/opencv/build/x86/vc10/lib
+         -- You might need to add C:\opencv\build\x86\vc10\bin to your PATH to be able to run your applications.
+         CMake Warning (dev) at src/test/CMakeLists.txt:19 (ADD_EXECUTABLE):
+           Policy CMP0037 is not set: Target names should not be reserved and should
+           match a validity pattern.  Run "cmake --help-policy CMP0037" for policy
+           details.  Use the cmake_policy command to set the policy and suppress this
+           warning.
+         
+           The target name "test" is reserved or not valid for certain CMake features,
+           such as generator expressions, and may result in undefined behavior.
+         This warning is for project developers.  Use -Wno-dev to suppress it.
+         
+         CMake Error at src/CMakeLists.txt:6 (ADD_SUBDIRECTORY):
+           add_subdirectory given source "watershed_and_distance_transform" which is
+           not an existing directory.
+         
+         
+         -- Configuring incomplete, errors occurred!
+         See also "C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeOutput.log".
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppCommon.targets(151,5): error MSB6006: "cmd.exe" exited with code 1.
+     1>Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\watershed_and_distance_transform\watershed_and_distance_transform.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.21

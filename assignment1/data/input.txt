@@ -1,7 +1,13 @@
-../data/assignment1B.jpg
 ../data/assignment1A.jpg
 ../data/assignment1B.jpg
 ../data/test1.jpg
 ../data/test2.png
-../data/Smarties2.jpg
-../data/SmartiesHard.jpg
+../data/test3.jpg
+../data/test4.jpg
+../data/test5.jpg
+../data/test6.jpg
+../data/test7.jpg
+../data/test8.jpg
+../data/test9.jpg
+../data/test10.jpg
+../data/test11.jpg

@@ -1,1 +1,2 @@
-The message is: Hello World!
+dmarew
+../data/assignment1A.jpg: 20 sweets

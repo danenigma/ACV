@@ -19,8 +19,9 @@ using namespace std;
 
 void prompt_and_exit(int status);
 void print_message_to_file(FILE *fp, char message[]);
-void count_smarties_with_morphology(char* fileName );
-void segment_colors_with_kmeans(char* fileName ,int numberOfColors);
+void count_smarties_with_morphology(int, void* );
 void remove_white_bg(Mat img);
 int get_contours_count(Mat src);
 int get_max_contour_size(vector<vector<Point> > contours);
+Mat convert_32bit_image_for_display(Mat& passed_image, double zero_maps_to=0.0, double passed_scale_factor=-1.0 );
+void get_local_maxima(Mat img,int size);

@@ -1,6 +1,8 @@
-﻿Build started 9/22/2017 11:17:41 AM.
-     1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\colourSegmentation\colourSegmentation.vcxproj" on node 2 (build target(s)).
-     1>InitializeBuildStatus:
+﻿Build started 10/9/2017 1:35:28 PM.
+     1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\colourSegmentation\colourSegmentation.vcxproj" on node 4 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "colourSegmentation.dir\Release\colourSegmentation.lastbuildstate".
+       InitializeBuildStatus:
          Creating "colourSegmentation.dir\Release\colourSegmentation.unsuccessfulbuild" because "AlwaysCreate" was specified.
        CustomBuild:
          Building Custom Rule C:/ACV/assignments/ACV-assignments/assignment1/src/colourSegmentation/CMakeLists.txt
@@ -23,8 +25,8 @@
        FinalizeBuildStatus:
          Deleting file "colourSegmentation.dir\Release\colourSegmentation.unsuccessfulbuild".
          Touching "colourSegmentation.dir\Release\colourSegmentation.lastbuildstate".
-     1>Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\colourSegmentation\colourSegmentation.vcxproj" (build target(s)).
+     1>Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\colourSegmentation\colourSegmentation.vcxproj" (rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.35
+Time Elapsed 00:00:04.48

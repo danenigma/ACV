@@ -1,6 +1,8 @@
-﻿Build started 9/22/2017 11:17:41 AM.
-     1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\dmarew\dmarew.vcxproj" on node 3 (build target(s)).
-     1>InitializeBuildStatus:
+﻿Build started 10/9/2017 1:35:27 PM.
+     1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\dmarew\dmarew.vcxproj" on node 3 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "dmarew.dir\Release\dmarew.lastbuildstate".
+       InitializeBuildStatus:
          Creating "dmarew.dir\Release\dmarew.unsuccessfulbuild" because "AlwaysCreate" was specified.
        CustomBuild:
          Building Custom Rule C:/ACV/assignments/ACV-assignments/assignment1/src/dmarew/CMakeLists.txt
@@ -22,8 +24,8 @@
        FinalizeBuildStatus:
          Deleting file "dmarew.dir\Release\dmarew.unsuccessfulbuild".
          Touching "dmarew.dir\Release\dmarew.lastbuildstate".
-     1>Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\dmarew\dmarew.vcxproj" (build target(s)).
+     1>Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\dmarew\dmarew.vcxproj" (rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.10
+Time Elapsed 00:00:04.31

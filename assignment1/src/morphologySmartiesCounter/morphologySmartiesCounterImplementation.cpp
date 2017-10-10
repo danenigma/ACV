@@ -12,31 +12,78 @@ void prompt_and_exit(int status) {
 void print_message_to_file(FILE *fp, char message[]) {
    fprintf(fp,"The message is: %s\n", message);
 }
-void count_smarties_with_morphology(char* fileName ){
-	Mat inputImage,threshImage,grayImage;
-	inputImage = imread(fileName);
-	imshow("Input Image",inputImage);
-	Mat element = getStructuringElement(MORPH_ELLIPSE,Size(9,9));
-	//imshow("structuring element",element);
-	GaussianBlur(inputImage,inputImage,Size(11,11),0);
-	remove_white_bg(inputImage);//remove white and shadow
-	cvtColor(inputImage,grayImage, CV_BGR2GRAY);
-    threshold(grayImage,threshImage,1,255,CV_THRESH_BINARY);
-	morphologyEx(threshImage,threshImage,MORPH_CLOSE,element,Point(0,0),2);
-	//Mat distanceImage;
-    //distanceTransform(threshImage, distanceImage, CV_DIST_L2, 3);
-	//normalize(distanceImage, distanceImage, 0, 1., NORM_MINMAX);
-	//threshold(distanceImage, distanceImage, .4, 1., CV_THRESH_BINARY);
-	morphologyEx(threshImage,threshImage,MORPH_ERODE,element,Point(-1,-1),4);//open to smooth the edges
-	imshow("Eroded Image",threshImage);
+void get_local_maxima(Mat img,int size){
 
+	Mat maxed;
+	Mat comp; 
+	Mat kernel = getStructuringElement(MORPH_RECT,Size(size,size),Point(size/2,size/2));
+	dilate(img,maxed,kernel,Point(2,2),1);
+	compare(img,maxed,comp,CV_CMP_EQ);
+	multiply(img,comp,img,1/255.);
+
+}
+void count_smarties_with_morphology(int, void*){
+
+   extern Mat inputImage; 
+   extern int halfStructuringElementSize; 
+   extern int iteration;
+   extern int dtThreshold;
+   extern int dtThresholdIt;
+   extern char* binaryWindowName;
+   extern char* processedWindowName;
+   extern char* inputWindowName;
+   extern char* dtThreshWindowName;
+   Mat greyscaleImage;
+   Mat binaryImage;
+   Mat filteredImage;
+   Mat blurImage;
+
+   if (halfStructuringElementSize<1)halfStructuringElementSize=1;
+   int structuringElementSize;
+
+   structuringElementSize = halfStructuringElementSize * 2 + 1;
+
+   /* convert from colour to greyscale if necessary */
+
+   if (inputImage.type() == CV_8UC3) { // colour image
+
+	   GaussianBlur(inputImage,blurImage,Size(5,5),1);
+	   remove_white_bg(blurImage);//remove white and shadow
+	   cvtColor(blurImage.clone(), greyscaleImage, CV_BGR2GRAY);
+	   
+    } 
+   else {
+      greyscaleImage = inputImage.clone();
+    }
+
+    binaryImage.create(greyscaleImage.size(), CV_8UC1);
+	Mat closeElement = getStructuringElement(MORPH_ELLIPSE,Size(31,31));
+	Mat closeKernel  = getStructuringElement(MORPH_ELLIPSE,Size(5,5));
+	Mat erodeElement = getStructuringElement(MORPH_ELLIPSE,Size(structuringElementSize,structuringElementSize));
+	threshold(greyscaleImage.clone(),filteredImage,1,255,CV_THRESH_BINARY);
+	morphologyEx(filteredImage,filteredImage,MORPH_CLOSE,closeKernel,Point(-1,-1),iteration);//open to smooth the edges
+	morphologyEx(filteredImage,filteredImage,MORPH_ERODE,erodeElement,Point(-1,-1),iteration);//open to smooth the edges
 	
-	do{
-		waitKey(30);                                  // Must call this to allow openCV to display the images
-     }while (!_kbhit());                             // We call it repeatedly to allow the user to move the windows
-                                                    // (if we don't the window process hangs when you try to click and drag)
-     getchar(); // flush the buffer from the keyboard hit
-	 destroyAllWindows();
+	Mat distTransform;
+	distanceTransform(filteredImage,distTransform,CV_DIST_L2, 5);
+	normalize(distTransform	, distTransform, 0, 1, NORM_MINMAX);
+	Mat origDistTransform;
+	distTransform.copyTo(origDistTransform);
+	double min,max;
+	minMaxLoc(distTransform,&min,&max);
+	Mat dtint =  convert_32bit_image_for_display(origDistTransform);
+	get_local_maxima(dtint,21);
+	dilate(dtint,dtint,closeElement);
+	Mat dtintThresh;
+	threshold(dtint,dtintThresh,dtThresholdIt,255,CV_THRESH_BINARY);
+	threshold(distTransform,distTransform,(dtThreshold/10.)*max,1,0);
+	cout<<get_contours_count(dtintThresh)<<endl;
+	imshow("dtint",dtint);
+	imshow(dtThreshWindowName,dtintThresh);
+	imshow("Dt Image",origDistTransform);
+	imshow(binaryWindowName,    filteredImage);
+    imshow(processedWindowName, origDistTransform);
+	imshow(inputWindowName,inputImage);
 
 }
 
@@ -47,9 +94,9 @@ for (row=0; row < img.rows; row++) {
 		   for (col=0; col < img.cols; col++) {
 
 		    /*assign colors on the achromatic axis(near) zero value(removing gray and white pixels)*/
-            if ((img.at<Vec3b>(row,col)[0] >= 210) &&
-                (img.at<Vec3b>(row,col)[1] >= 210) &&
-                (img.at<Vec3b>(row,col)[2] >= 210)) {//if white
+            if ((img.at<Vec3b>(row,col)[0] >= 240) &&
+                (img.at<Vec3b>(row,col)[1] >= 240) &&
+                (img.at<Vec3b>(row,col)[2] >= 240)) {//if white
 
                img.at<Vec3b>(row,col)[0] =0; 
                img.at<Vec3b>(row,col)[1] =0; 
@@ -77,25 +124,21 @@ int get_max_contour_size(vector<vector<Point> > contours){
 return largest_area;
 }
 
-int get_contours_count(Mat src){
+int get_contours_count(Mat filteredImage){
 
    /*this fun return the numebr of first hierarchy contours given an BGR image */
    bool DEBUG = false;
    int contourCount = 0;
-   Mat src_gray,threshImage;
-
-   cvtColor(src, src_gray, CV_BGR2GRAY);//convert to gray scale
-   threshold(src_gray,threshImage,1,255,CV_THRESH_BINARY);// threshold the image
    vector<vector<Point>> contours;
    vector<Vec4i> hierarchy;
-   findContours( threshImage.clone(), contours, hierarchy,RETR_EXTERNAL, CHAIN_APPROX_SIMPLE, Point(0, 0) );//get the contours
-   Mat drawing = Mat::zeros( threshImage.size(), CV_8UC3 );//to draw the contours
+   findContours( filteredImage.clone(), contours, hierarchy,RETR_EXTERNAL, CHAIN_APPROX_SIMPLE, Point(0, 0) );//get the contours
+   Mat drawing = Mat::zeros(filteredImage.size(), CV_8UC3 );//to draw the contours
    RNG rng(12345);//for random colors when drawing the contours
    //parameter that needs tuning
    float contourThreshold = 0.001;//if the max contour area in the image is less than this value no smarties(too small)
    
    int max_contour_area = get_max_contour_size(contours);//get the max contour area among the contours
-   int imageArea = src.cols*src.rows;//area of the original image
+   int imageArea = filteredImage.cols*filteredImage.rows;//area of the original image
    if ((max_contour_area*1./imageArea)>contourThreshold){
    for( size_t i = 0; i< contours.size(); i++ )
      {
@@ -110,11 +153,25 @@ int get_contours_count(Mat src){
    }
    if(DEBUG)
    {
-		imshow("Contours", drawing );
+		//imshow("Contours", drawing );
 		cout<<"max contour area: "<<max_contour_area<<endl;
 		cout<<"contour to image area : "<<(max_contour_area*1./imageArea)<<endl;
 		cout<<"is it big enough: "<<((max_contour_area*1./imageArea)>contourThreshold)<<endl;
    
    }
    return contourCount;
+}
+
+Mat convert_32bit_image_for_display(Mat& passed_image, double zero_maps_to/*=0.0*/, double passed_scale_factor/*=-1.0*/ )
+{
+	Mat display_image;
+	double scale_factor = passed_scale_factor;
+	if (passed_scale_factor == -1.0)
+	{
+		double minimum,maximum;
+		minMaxLoc(passed_image,&minimum,&maximum);
+		scale_factor = (255.0-zero_maps_to)/max(-minimum,maximum);
+	}
+	passed_image.convertTo(display_image, CV_8U, scale_factor, zero_maps_to);
+	return display_image;
 }

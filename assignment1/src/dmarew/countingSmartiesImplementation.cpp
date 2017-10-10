@@ -16,7 +16,7 @@ int get_contours(Mat threshImage){
    RNG rng(12345);
    vector<vector<Point>> contours;
    vector<Vec4i> hierarchy;
-   findContours( threshImage.clone(), contours, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE, Point(0, 0) );
+   findContours( threshImage.clone(), contours, hierarchy,RETR_EXTERNAL, CHAIN_APPROX_SIMPLE, Point(0, 0) );
    Mat drawing = Mat::zeros( threshImage.size(), CV_8UC3 );
    int counter = 0;
    int max_contour_area = get_max_contour_size(contours);

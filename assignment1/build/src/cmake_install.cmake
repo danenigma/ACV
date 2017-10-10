@@ -33,6 +33,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/ACV/assignments/ACV-assignments/assignment1/build/src/colourSegmentation/cmake_install.cmake")
   include("C:/ACV/assignments/ACV-assignments/assignment1/build/src/kmeansSmartiesCounter/cmake_install.cmake")
   include("C:/ACV/assignments/ACV-assignments/assignment1/build/src/morphologySmartiesCounter/cmake_install.cmake")
+  include("C:/ACV/assignments/ACV-assignments/assignment1/build/src/smartiesCounter/cmake_install.cmake")
 
 endif()
 
