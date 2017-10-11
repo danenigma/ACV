@@ -69,4 +69,4 @@ int get_max_contour_size(vector<vector<Point> > contours);
 Mat convert_32bit_image_for_display(Mat& passed_image, double zero_maps_to=0.0, double passed_scale_factor=-1.0 );
 void get_local_maxima(Mat img,int size);
 int get_threshold_from_image_stat(Mat img,double overlapParam);
-void flood_fill(Mat img);
+void displayMultilpleImages(Mat* imageList,int numberOfImages);

@@ -1,12 +1,12 @@
-﻿Build started 10/11/2017 6:05:30 AM.
+﻿Build started 10/11/2017 7:59:03 AM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\countSmartiesWithCanny\countSmartiesWithCanny.vcxproj" on node 3 (rebuild target(s)).
-     1>InitializeBuildStatus:
+     1>_PrepareForClean:
+         Deleting file "countSmartiesWithCanny.dir\Release\countSmartiesWithCanny.lastbuildstate".
+       InitializeBuildStatus:
          Creating "countSmartiesWithCanny.dir\Release\countSmartiesWithCanny.unsuccessfulbuild" because "AlwaysCreate" was specified.
        CustomBuild:
          Building Custom Rule C:/ACV/assignments/ACV-assignments/assignment1/src/countSmartiesWithCanny/CMakeLists.txt
          CMake does not need to re-run because C:\ACV\assignments\ACV-assignments\assignment1\build\src\countSmartiesWithCanny\CMakeFiles\generate.stamp is up-to-date.
-       MakeDirsForCl:
-         Creating directory "C:\ACV\assignments\ACV-assignments\assignment1\build\src\countSmartiesWithCanny\Release".
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\opencv\build\include /IC:\opencv\build\include\opencv /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_DEPRECATE /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"countSmartiesWithCanny.dir\Release\\" /Fd"countSmartiesWithCanny.dir\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\countSmartiesWithCanny\countingSmartiesApplication.cpp ..\..\..\src\countSmartiesWithCanny\countingSmartiesImplementation.cpp
          countingSmartiesApplication.cpp
@@ -28,4 +28,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.58
+Time Elapsed 00:00:04.19

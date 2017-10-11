@@ -1,7 +1,7 @@
-﻿Build started 10/11/2017 6:05:29 AM.
+﻿Build started 10/11/2017 7:59:02 AM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\ZERO_CHECK.vcxproj" on node 2 (rebuild target(s)).
-     1>PrepareForBuild:
-         Creating directory "C:\ACV\assignments\ACV-assignments\assignment1\build\Release\".
+     1>_PrepareForClean:
+         Deleting file "Win32\Release\ZERO_CHECK\ZERO_CHECK.lastbuildstate".
        InitializeBuildStatus:
          Creating "Win32\Release\ZERO_CHECK\ZERO_CHECK.unsuccessfulbuild" because "AlwaysCreate" was specified.
        CustomBuild:
@@ -20,4 +20,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.24
+Time Elapsed 00:00:00.12

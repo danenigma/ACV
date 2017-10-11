@@ -1,4 +1,4 @@
-﻿Build started 10/11/2017 6:08:01 AM.
+﻿Build started 10/11/2017 9:28:54 AM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\INSTALL.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Win32\Release\INSTALL\INSTALL.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -26,4 +26,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.28
+Time Elapsed 00:00:00.14

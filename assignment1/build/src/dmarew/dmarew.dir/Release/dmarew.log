@@ -1,4 +1,4 @@
-﻿Build started 10/11/2017 6:07:59 AM.
+﻿Build started 10/11/2017 9:28:53 AM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\dmarew\dmarew.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "dmarew.dir\Release\dmarew.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -7,15 +7,15 @@
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\opencv\build\include /IC:\opencv\build\include\opencv /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_DEPRECATE /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"dmarew.dir\Release\\" /Fd"dmarew.dir\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\dmarew\sweetsCounterImplementation.cpp
          sweetsCounterImplementation.cpp
-     1>..\..\..\src\dmarew\sweetsCounterImplementation.cpp(85): warning C4018: '<' : signed/unsigned mismatch
-     1>..\..\..\src\dmarew\sweetsCounterImplementation.cpp(87): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>..\..\..\src\dmarew\sweetsCounterImplementation.cpp(87): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>..\..\..\src\dmarew\sweetsCounterImplementation.cpp(132): warning C4018: '<' : signed/unsigned mismatch
-     1>..\..\..\src\dmarew\sweetsCounterImplementation.cpp(137): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>..\..\..\src\dmarew\sweetsCounterImplementation.cpp(154): warning C4018: '<' : signed/unsigned mismatch
-     1>..\..\..\src\dmarew\sweetsCounterImplementation.cpp(160): warning C4018: '<' : signed/unsigned mismatch
-     1>..\..\..\src\dmarew\sweetsCounterImplementation.cpp(161): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\src\dmarew\sweetsCounterImplementation.cpp(161): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\src\dmarew\sweetsCounterImplementation.cpp(92): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\src\dmarew\sweetsCounterImplementation.cpp(94): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\src\dmarew\sweetsCounterImplementation.cpp(95): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\src\dmarew\sweetsCounterImplementation.cpp(186): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\src\dmarew\sweetsCounterImplementation.cpp(191): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>..\..\..\src\dmarew\sweetsCounterImplementation.cpp(208): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\src\dmarew\sweetsCounterImplementation.cpp(214): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\src\dmarew\sweetsCounterImplementation.cpp(215): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\src\dmarew\sweetsCounterImplementation.cpp(215): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\Release\dmarew.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib C:\opencv\build\x86\vc10\lib\opencv_videostab2410.lib C:\opencv\build\x86\vc10\lib\opencv_ts2410.lib C:\opencv\build\x86\vc10\lib\opencv_superres2410.lib C:\opencv\build\x86\vc10\lib\opencv_stitching2410.lib C:\opencv\build\x86\vc10\lib\opencv_contrib2410.lib C:\opencv\build\x86\vc10\lib\opencv_nonfree2410.lib C:\opencv\build\x86\vc10\lib\opencv_ocl2410.lib C:\opencv\build\x86\vc10\lib\opencv_gpu2410.lib C:\opencv\build\x86\vc10\lib\opencv_photo2410.lib C:\opencv\build\x86\vc10\lib\opencv_objdetect2410.lib C:\opencv\build\x86\vc10\lib\opencv_legacy2410.lib C:\opencv\build\x86\vc10\lib\opencv_video2410.lib C:\opencv\build\x86\vc10\lib\opencv_ml2410.lib C:\opencv\build\x86\vc10\lib\opencv_calib3d2410.lib C:\opencv\build\x86\vc10\lib\opencv_features2d2410.lib C:\opencv\build\x86\vc10\lib\opencv_highgui2410.lib C:\opencv\build\x86\vc10\lib\opencv_imgproc2410.lib C:\opencv\build\x86\vc10\lib\opencv_flann2410.lib C:\opencv\build\x86\vc10\lib\opencv_core2410.lib /NODEFAULTLIB:"libc;libcmt.lib;libcmtd.lib" /MANIFEST /ManifestFile:"dmarew.dir\Release\dmarew.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/Release/dmarew.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/Release/dmarew.lib" /MACHINE:X86 dmarew.dir\Release\sweetsCounterApplication.obj
          dmarew.dir\Release\sweetsCounterImplementation.obj  /machine:X86 
@@ -29,4 +29,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.36
+Time Elapsed 00:00:01.51

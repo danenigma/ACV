@@ -8,33 +8,45 @@
 int count_smarties(int backgroundThreshold/*=190*/, int localMaximaSize/*=21*/,double overlapParam/*=0.75*/){
 
    extern Mat inputImage; 
-   extern int halfStructuringElementSize; 
-   extern int iteration;
-   extern int dtThreshold;
-   extern int dtThresholdIt;
-   extern char* binaryWindowName;
-   extern char* processedWindowName;
-   extern char* inputWindowName;
-   extern char* dtThreshWindowName;
+   
+   char* inputWindowName = "Input Image";
+   char* inputBgRemovedWindowName = "Input Image without background";
+   char* DTInputWindowName = "Distance Transform Input";
+   char* DTOutputWindowName = "Distance Transform Output";
+   char* DTLocalMaximaWindowName = "Distance Transform Local Maxima";
+   char* DTLocalMaximaDilatedWindowName = "Dilated Local Maxima";
+   char* DTBinaryWindowName = "Distance Transform Thresholded(Input for Component Analysis)";
+
+
+   namedWindow(inputWindowName, CV_WINDOW_AUTOSIZE);
+   namedWindow(inputBgRemovedWindowName, CV_WINDOW_AUTOSIZE );
+   namedWindow(DTInputWindowName, CV_WINDOW_AUTOSIZE );
+   namedWindow(DTOutputWindowName, CV_WINDOW_AUTOSIZE );
+   namedWindow(DTLocalMaximaWindowName, CV_WINDOW_AUTOSIZE );
+   namedWindow(DTLocalMaximaDilatedWindowName, CV_WINDOW_AUTOSIZE );
+   namedWindow(DTBinaryWindowName, CV_WINDOW_AUTOSIZE );
+   
 
    Mat greyscaleImage;
-   Mat binaryImage;
+   Mat dtInputImage;
    Mat filteredImage;
    Mat blurImage;
    Mat distTransform;
    Mat distTransformUint;
-   Mat distTransformThresh;
+   Mat distTransformBinaryImage;
+   Mat distTransformDilatedImage;
+   Mat distTransformLocalMaximaImage;
 
-   if (halfStructuringElementSize<1)halfStructuringElementSize=1;
-   int structuringElementSize;
+
+   int structuringElementSize = 5; 
    int distTransformThreshold;
    int smartiesCount;
    int crossHairSize = 10;
-   vector<Point2f> smarties;
-   
-   int low_threshold = 0,high_threshold = 200;
 
-   structuringElementSize = halfStructuringElementSize * 2 + 1;
+   vector<Point2f> smartyCenters;
+   
+
+   
 
    /* convert from colour to greyscale if necessary */
    
@@ -42,8 +54,6 @@ int count_smarties(int backgroundThreshold/*=190*/, int localMaximaSize/*=21*/,d
 	   GaussianBlur(inputImage,blurImage,Size(21,21),1);
 	   
 	   remove_white_bg(blurImage,backgroundThreshold);//remove white and shadow
-
-	   if(~DEBUG)imshow("bg removed image",blurImage);
 	   cvtColor(blurImage.clone(), greyscaleImage, CV_BGR2GRAY);
     } 
    else {
@@ -51,57 +61,101 @@ int count_smarties(int backgroundThreshold/*=190*/, int localMaximaSize/*=21*/,d
     }
     
 
-    binaryImage.create(greyscaleImage.size(), CV_8UC1);
-	//structuring elements
-
 	Mat dilateElement = getStructuringElement(MORPH_ELLIPSE,Size(23,23));
-	Mat closeElement  = getStructuringElement(MORPH_ELLIPSE,Size(5,5));
-	Mat erodeElement  = getStructuringElement(MORPH_ELLIPSE,Size(5,5));
+	Mat closeElement  = getStructuringElement(MORPH_ELLIPSE,Size(structuringElementSize ,structuringElementSize ));
+	Mat erodeElement  = getStructuringElement(MORPH_ELLIPSE,Size(structuringElementSize ,structuringElementSize ));
 
 	threshold(greyscaleImage,filteredImage,1,255,CV_THRESH_BINARY/*|CV_THRESH_OTSU*/);
-	
 	morphologyEx(filteredImage,filteredImage, MORPH_CLOSE,closeElement);
-	morphologyEx(filteredImage,filteredImage, MORPH_ERODE,erodeElement,Point(-1,-1),1);
-	imshow("first thresholding",filteredImage);
-	morphologyEx(filteredImage,filteredImage,MORPH_ERODE,erodeElement);//remove noise
-	
+	morphologyEx(filteredImage,dtInputImage, MORPH_ERODE,erodeElement,Point(-1,-1),2);
 
-	distanceTransform(filteredImage,distTransform,CV_DIST_L2, 5);
+	
+	distanceTransform(dtInputImage,distTransform,CV_DIST_L2, 5);
 	normalize(distTransform	, distTransform, 0, 1, NORM_MINMAX);
+    distTransformUint =  convert_32bit_image_for_display(distTransform);
+	distTransformUint.copyTo(distTransformLocalMaximaImage);
 
 
-	distTransformUint =  convert_32bit_image_for_display(distTransform);
-
-	get_local_maxima(distTransformUint,localMaximaSize);
-	imshow("local maxima",distTransformUint);
-
-	dilate(distTransformUint,distTransformUint,dilateElement);
+	get_local_maxima(distTransformLocalMaximaImage,localMaximaSize);
 	
-	distTransformThreshold = get_threshold_from_image_stat(distTransformUint, overlapParam); 
-	threshold(distTransformUint,distTransformThresh,distTransformThreshold,255,CV_THRESH_BINARY);
-	smarties = get_contours_count(distTransformThresh);
-	smartiesCount = smarties.size();
-	int x,y;
-	for (int i=0;i<smarties.size();i++){
 
-	    x = smarties[i].x;y=smarties[i].y;
+	dilate(distTransformLocalMaximaImage,distTransformDilatedImage,dilateElement);
+	
+
+	distTransformThreshold = get_threshold_from_image_stat(distTransformDilatedImage, overlapParam); 
+	threshold(distTransformDilatedImage,distTransformBinaryImage,distTransformThreshold,255,CV_THRESH_BINARY);
+
+
+	smartyCenters = get_contours_count(distTransformBinaryImage);
+	smartiesCount = smartyCenters.size();
+	int x,y;
+	for (int i=0;i<smartyCenters.size();i++){
+
+	    x = smartyCenters[i].x;
+		y = smartyCenters[i].y;
 		line(inputImage,Point(x-crossHairSize/2,y),Point(x+crossHairSize/2,y),(255,0,255),2);
 		line(inputImage,Point(x,y-crossHairSize/2),Point(x,y+crossHairSize/2),(255,0,255),2);	
 	}
+
 	stringstream ss;
 	ss << "Number of smarties: "<<smartiesCount;
 	putText(inputImage,ss.str(),Point(30,30), 
     FONT_HERSHEY_COMPLEX_SMALL, 0.8, Scalar(200,200,250), 1, CV_AA);
 
-	imshow(dtThreshWindowName,distTransformThresh);
-	imshow(binaryWindowName,    filteredImage);
-	imshow(processedWindowName, distTransformUint);
 	imshow(inputWindowName,inputImage);
-
-	return smartiesCount;
+	imshow(inputBgRemovedWindowName,blurImage);
+	imshow(DTInputWindowName,dtInputImage);
+	imshow(DTOutputWindowName,distTransformUint);
+	imshow(DTBinaryWindowName,distTransformBinaryImage);
+	imshow(DTLocalMaximaWindowName,distTransformLocalMaximaImage);
+	imshow(DTLocalMaximaDilatedWindowName,distTransformDilatedImage);
+	Mat imageList[] = {dtInputImage,distTransformUint,distTransformLocalMaximaImage,
+		distTransformDilatedImage,distTransformBinaryImage,inputImage};
+	displayMultilpleImages(imageList,6);
+return smartiesCount;
 }
 
+void displayMultilpleImages(Mat* imageList,int numberOfImages){
 
+	int space = 10;
+	
+	Mat DispImage = Mat::zeros(Size(imageList[0].cols + space,imageList[0].rows + space), CV_8UC3);
+	int xScale = 3;
+	int yScale = 2;
+	int xStart = 0;
+	int xCounter = 0;
+	int yStart = 0;
+	for(int i=0;i<numberOfImages;i++){
+
+		Mat currentImg;
+		if (imageList[i].type()==CV_8UC1) {
+				  //input image is grayscale
+			cvtColor(imageList[i], currentImg, CV_GRAY2RGB);
+
+		}else{
+	
+			currentImg = imageList[i];
+	
+		}
+
+		Mat temp;
+		if(i==3){
+
+			yStart = (int)(currentImg.rows/yScale) + space;
+			xCounter=0;
+		}
+		xStart=xCounter*currentImg.cols/xScale;
+		Rect ROI(xStart,yStart,(int)(currentImg.cols/xScale),(int)(currentImg.rows/yScale));
+		resize(currentImg,temp, Size(ROI.width, ROI.height));
+		temp.copyTo(DispImage(ROI));
+		xCounter++;
+		
+		}
+	
+	
+		imshow("Processing Steps",DispImage);
+	
+}
 void remove_white_bg(Mat img,int backgroundThreshold){
 	int row, col;
 	for (row=0; row < img.rows; row++) {

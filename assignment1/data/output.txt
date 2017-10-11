@@ -1,3 +1,22 @@
 dmarew
 ../data/assignment1A.jpg: 20 sweets
 ../data/assignment1B.jpg: 30 sweets
+../data/overlappingThreeSmarties.jpg: 3 sweets
+../data/cameraPerspectiveSmarties.jpg: 30 sweets
+../data/reallyHardSmarties.jpg: 5 sweets
+../data/twoSmarties.jpg: 2 sweets
+../data/hardestSmarties.jpg: 5 sweets
+../data/hardSmarties.jpg: 5 sweets
+../data/oneSmarty.jpg: 1 sweets
+../data/smallSmarties.jpg: 11 sweets
+../data/fiveSmarties.jpg: 5 sweets
+../data/fourSmarties.jpg: 4 sweets
+../data/threeSmarties.jpg: 3 sweets
+../data/test1.jpg: 28 sweets
+../data/test2.png: 117 sweets
+../data/test3.jpg: 7 sweets
+../data/test4.jpg: 32 sweets
+../data/test5.jpg: 33 sweets
+../data/test6.jpg: 34 sweets
+../data/test7.jpg: 35 sweets
+../data/test8.jpg: 38 sweets

@@ -1,12 +1,12 @@
-﻿Build started 10/11/2017 6:05:30 AM.
+﻿Build started 10/11/2017 7:59:03 AM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\kmeansSmartiesCounter\kmeansSmartiesCounter.vcxproj" on node 5 (rebuild target(s)).
-     1>InitializeBuildStatus:
+     1>_PrepareForClean:
+         Deleting file "kmeansSmartiesCounter.dir\Release\kmeansSmartiesCounter.lastbuildstate".
+       InitializeBuildStatus:
          Creating "kmeansSmartiesCounter.dir\Release\kmeansSmartiesCounter.unsuccessfulbuild" because "AlwaysCreate" was specified.
        CustomBuild:
          Building Custom Rule C:/ACV/assignments/ACV-assignments/assignment1/src/kmeansSmartiesCounter/CMakeLists.txt
          CMake does not need to re-run because C:\ACV\assignments\ACV-assignments\assignment1\build\src\kmeansSmartiesCounter\CMakeFiles\generate.stamp is up-to-date.
-       MakeDirsForCl:
-         Creating directory "C:\ACV\assignments\ACV-assignments\assignment1\build\src\kmeansSmartiesCounter\Release".
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\opencv\build\include /IC:\opencv\build\include\opencv /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_DEPRECATE /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"kmeansSmartiesCounter.dir\Release\\" /Fd"kmeansSmartiesCounter.dir\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\kmeansSmartiesCounter\kmeansSmartiesCounterApplication.cpp ..\..\..\src\kmeansSmartiesCounter\kmeansSmartiesCounterImplementation.cpp
          kmeansSmartiesCounterApplication.cpp
@@ -29,4 +29,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.36
+Time Elapsed 00:00:03.94

@@ -15,28 +15,19 @@
 
 */
 Mat inputImage;
-int halfStructuringElementSize  = 1;   // default size of structuring element divided by two: structuring element size = value * 2 + 1
-int dtThreshold = 5;
-int dtThresholdIt = 165;
 
-char* inputWindowName     = "Input Image";
-char* binaryWindowName    = "Flooded Image";
-char* processedWindowName = "Final output Image";
-char* dtThreshWindowName  = "distance transform Thresh Image";
+
 int view;
 
 
 int main() {
 
-   int end_of_file;
+   int  end_of_file;
    bool debug = true;
    char filename[MAX_FILENAME_LENGTH];
+   int  smartiesCount;
    
-   int const maxHalfStructuringElementSize  =   11;   
-   int const maxIteration    =   10;   
-   int const maxDtThreshold  =   10;   
-   int const maxDtThresholdIt  =   255;   
-   
+
    FILE *fp_in,*fp_out;
 
    if ((fp_in = fopen("../data/input.txt","r")) == 0) {
@@ -61,13 +52,8 @@ int main() {
          }
 
          printf("Press any key to continue ...\n");
-         namedWindow(inputWindowName, CV_WINDOW_AUTOSIZE);
+
 		 
-         // Create a window
-         namedWindow(binaryWindowName,    CV_WINDOW_AUTOSIZE );
-         namedWindow(processedWindowName, CV_WINDOW_AUTOSIZE );
-         resizeWindow(processedWindowName,0,0); // this forces the trackbar to be as small as possible (and to fit in the window)
-		 int smartiesCount;
 		 smartiesCount = count_smarties();
 		 stringstream ss;
 		 ss << filename <<": "<<smartiesCount<<" sweets";
@@ -84,7 +70,7 @@ int main() {
 
       }
    } while (end_of_file != EOF);
-
+   
    fclose(fp_in);
    fclose(fp_out);
    return 0;
