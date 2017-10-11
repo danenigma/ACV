@@ -20,7 +20,7 @@ int dtThreshold = 5;
 int dtThresholdIt = 165;
 
 char* inputWindowName     = "Input Image";
-char* binaryWindowName    = "Binary Image";
+char* binaryWindowName    = "Flooded Image";
 char* processedWindowName = "Final output Image";
 char* dtThreshWindowName  = "distance transform Thresh Image";
 int view;
@@ -68,7 +68,7 @@ int main() {
          namedWindow(processedWindowName, CV_WINDOW_AUTOSIZE );
          resizeWindow(processedWindowName,0,0); // this forces the trackbar to be as small as possible (and to fit in the window)
 		 int smartiesCount;
-		 smartiesCount = count_smarties(0, 0);
+		 smartiesCount = count_smarties();
 		 stringstream ss;
 		 ss << filename <<": "<<smartiesCount<<" sweets";
 		 fprintf(fp_out,"%s\n",ss.str());

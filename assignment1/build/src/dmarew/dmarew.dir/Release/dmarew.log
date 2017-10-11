@@ -1,4 +1,4 @@
-﻿Build started 10/9/2017 1:35:27 PM.
+﻿Build started 10/10/2017 12:57:12 PM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\dmarew\dmarew.vcxproj" on node 3 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "dmarew.dir\Release\dmarew.lastbuildstate".
@@ -28,4 +28,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.31
+Time Elapsed 00:00:04.77

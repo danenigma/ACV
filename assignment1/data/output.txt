@@ -1,2 +1,4 @@
 dmarew
 ../data/assignment1A.jpg: 20 sweets
+../data/assignment1B.jpg: 30 sweets
+../data/overlappingThreeSmarties.jpg: 3 sweets

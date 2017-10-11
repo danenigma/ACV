@@ -5,7 +5,7 @@
 
 
 
-int count_smarties(int, void*){
+int count_smarties(int backgroundThreshold/*=190*/, int localMaximaSize/*=21*/,double overlapParam/*=0.75*/){
 
    extern Mat inputImage; 
    extern int halfStructuringElementSize; 
@@ -31,53 +31,89 @@ int count_smarties(int, void*){
    int crossHairSize = 10;
    vector<Point2f> smarties;
    
-
+   int low_threshold = 0,high_threshold = 200;
 
    structuringElementSize = halfStructuringElementSize * 2 + 1;
 
    /* convert from colour to greyscale if necessary */
-
+   
    if (inputImage.type() == CV_8UC3) { // colour image
+	   GaussianBlur(inputImage,blurImage,Size(21,21),1);
+	   
+	   remove_white_bg(blurImage,backgroundThreshold);//remove white and shadow
 
-	   GaussianBlur(inputImage,blurImage,Size(5,5),1);
-	   remove_white_bg(blurImage);//remove white and shadow
 	   if(~DEBUG)imshow("bg removed image",blurImage);
 	   cvtColor(blurImage.clone(), greyscaleImage, CV_BGR2GRAY);
 	   
+	   
+	   /*
+	   Mat adthresh,gray;
+	   cvtColor(inputImage.clone(), gray, CV_BGR2GRAY);
+	   adaptiveThreshold(greyscaleImage.clone(),adthresh,255,CV_ADAPTIVE_THRESH_GAUSSIAN_C,CV_THRESH_BINARY_INV,7,2);
+	   imshow("adaptive thresholding",adthresh);
+	   Mat floodFillThresh;
+	   adthresh.clone().copyTo(floodFillThresh);
+	   flood_fill(floodFillThresh);
+	   imshow("adaptive thresholding flooded",adthresh);
+	   Mat output;
+	   subtract(floodFillThresh,adthresh,output);
+	   imshow("adaptive thresholding subtracted",output);
+	   */
     } 
    else {
       greyscaleImage = inputImage.clone();
     }
+    
 
     binaryImage.create(greyscaleImage.size(), CV_8UC1);
 	//structuring elements
 
-	Mat dilateElement = getStructuringElement(MORPH_ELLIPSE,Size(31,31));
+	Mat dilateElement = getStructuringElement(MORPH_ELLIPSE,Size(23,23));
 	Mat closeElement  = getStructuringElement(MORPH_ELLIPSE,Size(5,5));
-	Mat erodeElement  = getStructuringElement(MORPH_ELLIPSE,Size(structuringElementSize,structuringElementSize));
+	Mat erodeElement  = getStructuringElement(MORPH_ELLIPSE,Size(5,5));
+	threshold(greyscaleImage,filteredImage,1,255,CV_THRESH_BINARY/*|CV_THRESH_OTSU*/);
+	morphologyEx(filteredImage,filteredImage, MORPH_CLOSE,closeElement);
+	morphologyEx(filteredImage,filteredImage, MORPH_ERODE,erodeElement,Point(-1,-1),1);
+	imshow("first thresholding",filteredImage);
+	//Mat otsuImage;
+	//threshold(greyscaleImage.clone(),otsuImage,1,255,CV_THRESH_BINARY|CV_THRESH_OTSU);
+	//flood_fill(otsuImage);
+	//imshow("ostu flood filled",otsuImage);
+	/*
+	Mat iterclose;
 
-	threshold(greyscaleImage.clone(),filteredImage,1,255,CV_THRESH_BINARY);
-	flood_fill(filteredImage);
-	//morphologyEx(filteredImage,filteredImage,MORPH_CLOSE,closeElement);//close to fill any holes
+	for (int i = 1; i < 13; i++)
+    {
+        Mat kernel = getStructuringElement(MORPH_ELLIPSE, cv::Size(2*i+1, 2*i+1));
+		morphologyEx(filteredImage.clone(),iterclose, MORPH_CLOSE, kernel, Point(-1, -1), 1);
+    }
+
+	imshow("original thresh",filteredImage);
+	imshow("holes closed with iterative",iterclose);
+	*/
 	
-	morphologyEx(filteredImage,filteredImage,MORPH_ERODE,erodeElement);//open to smooth the edges
+	/*
+	Mat dilatedImage;
+	morphologyEx(filteredImage,dilatedImage,MORPH_DILATE,closeElement);//remove noise
+	imshow("dilated image",dilatedImage);
+	*/
+	//flood_fill(filteredImage);
+	morphologyEx(filteredImage,filteredImage,MORPH_ERODE,erodeElement);//remove noise
 	
-	
+
 	distanceTransform(filteredImage,distTransform,CV_DIST_L2, 5);
 	normalize(distTransform	, distTransform, 0, 1, NORM_MINMAX);
 
 
-
 	distTransformUint =  convert_32bit_image_for_display(distTransform);
 
-	get_local_maxima(distTransformUint,25);
+	get_local_maxima(distTransformUint,localMaximaSize);
+	imshow("local maxima",distTransformUint);
 
 	dilate(distTransformUint,distTransformUint,dilateElement);
 	
-	distTransformThreshold = get_threshold_from_image_stat(distTransformUint); 
+	distTransformThreshold = get_threshold_from_image_stat(distTransformUint, overlapParam); 
 	threshold(distTransformUint,distTransformThresh,distTransformThreshold,255,CV_THRESH_BINARY);
-
-	
 	smarties = get_contours_count(distTransformThresh);
 	smartiesCount = smarties.size();
 	int x,y;
@@ -101,15 +137,18 @@ int count_smarties(int, void*){
 }
 
 
-void remove_white_bg(Mat img){
+void remove_white_bg(Mat img,int backgroundThreshold){
 	int row, col;
 	for (row=0; row < img.rows; row++) {
 			   for (col=0; col < img.cols; col++) {
 
 			    /*assign colors on the achromatic axis(near) zero value(removing gray and white pixels)*/
-	            if ((img.at<Vec3b>(row,col)[0] >= 190) &&
-	                (img.at<Vec3b>(row,col)[1] >= 190) &&
-	                (img.at<Vec3b>(row,col)[2] >= 190)) {//if white
+	            if (((img.at<Vec3b>(row,col)[0] >= backgroundThreshold) &&
+	                (img.at<Vec3b>(row,col)[1]  >= backgroundThreshold) &&
+	                (img.at<Vec3b>(row,col)[2]  >= backgroundThreshold))
+					|
+					((img.at<Vec3b>(row,col)[0]==img.at<Vec3b>(row,col)[1])&&
+					 (img.at<Vec3b>(row,col)[1]==img.at<Vec3b>(row,col)[2]))) {//if white
 
 	               img.at<Vec3b>(row,col)[0] =0; 
 	               img.at<Vec3b>(row,col)[1] =0; 
@@ -183,7 +222,7 @@ void prompt_and_exit(int status) {
 void print_message_to_file(FILE *fp, char message[]) {
    fprintf(fp,"The message is: %s\n", message);
 }
-int get_threshold_from_image_stat(Mat img){
+int get_threshold_from_image_stat(Mat img,double overlapParam){
 
 	double min,max;
 	minMaxLoc(img,&min,&max);
@@ -202,7 +241,7 @@ int get_threshold_from_image_stat(Mat img){
 
     if(DEBUG)cout<<"mean intensity of image: "<<meanImageIntensity<<endl;
 
-	return (int)(0.9*meanImageIntensity);
+	return (int)(overlapParam*meanImageIntensity);
 }
 void get_local_maxima(Mat img,int size){
 
