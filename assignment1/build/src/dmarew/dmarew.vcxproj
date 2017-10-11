@@ -309,9 +309,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\src\dmarew\countingSmarties.h" />
-    <ClCompile Include="..\..\..\src\dmarew\countingSmartiesApplication.cpp"  />
-    <ClCompile Include="..\..\..\src\dmarew\countingSmartiesImplementation.cpp"  />
+    <ClInclude Include="..\..\..\src\dmarew\sweetsCounter.h" />
+    <ClCompile Include="..\..\..\src\dmarew\sweetsCounterApplication.cpp"  />
+    <ClCompile Include="..\..\..\src\dmarew\sweetsCounterImplementation.cpp"  />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment1/build/ZERO_CHECK.vcxproj">

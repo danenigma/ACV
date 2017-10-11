@@ -1,4 +1,4 @@
-﻿Build started 10/11/2017 5:07:30 AM.
+﻿Build started 10/11/2017 6:08:01 AM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\INSTALL.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Win32\Release\INSTALL\INSTALL.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -14,11 +14,11 @@
          if %errorlevel% neq 0 goto :VCEnd
          :VCEnd
          -- Install configuration: "Release"
-         -- Up-to-date: C:/ACV/assignments/ACV-assignments/assignment1/bin/dmarew.exe
+         -- Up-to-date: C:/ACV/assignments/ACV-assignments/assignment1/bin/countSmartiesWithCanny.exe
          -- Up-to-date: C:/ACV/assignments/ACV-assignments/assignment1/bin/colourSegmentation.exe
          -- Up-to-date: C:/ACV/assignments/ACV-assignments/assignment1/bin/kmeansSmartiesCounter.exe
          -- Up-to-date: C:/ACV/assignments/ACV-assignments/assignment1/bin/morphologySmartiesCounter.exe
-         -- Installing: C:/ACV/assignments/ACV-assignments/assignment1/bin/smartiesCounter.exe
+         -- Installing: C:/ACV/assignments/ACV-assignments/assignment1/bin/dmarew.exe
        FinalizeBuildStatus:
          Deleting file "Win32\Release\INSTALL\INSTALL.unsuccessfulbuild".
          Touching "Win32\Release\INSTALL\INSTALL.lastbuildstate".
@@ -26,4 +26,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.15
+Time Elapsed 00:00:00.28

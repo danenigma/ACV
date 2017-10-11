@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="..\..\..\src\dmarew\countingSmartiesApplication.cpp">
+    <ClCompile Include="..\..\..\src\dmarew\sweetsCounterApplication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\src\dmarew\countingSmartiesImplementation.cpp">
+    <ClCompile Include="..\..\..\src\dmarew\sweetsCounterImplementation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\src\dmarew\countingSmarties.h">
+    <ClInclude Include="..\..\..\src\dmarew\sweetsCounter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

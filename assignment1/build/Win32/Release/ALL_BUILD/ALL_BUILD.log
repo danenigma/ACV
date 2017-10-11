@@ -1,8 +1,6 @@
-﻿Build started 10/10/2017 12:57:20 PM.
+﻿Build started 10/11/2017 6:05:37 AM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\ALL_BUILD.vcxproj" on node 4 (rebuild target(s)).
-     1>_PrepareForClean:
-         Deleting file "Win32\Release\ALL_BUILD\ALL_BUILD.lastbuildstate".
-       InitializeBuildStatus:
+     1>InitializeBuildStatus:
          Creating "Win32\Release\ALL_BUILD\ALL_BUILD.unsuccessfulbuild" because "AlwaysCreate" was specified.
        CustomBuild:
          Building Custom Rule C:/ACV/assignments/ACV-assignments/assignment1/CMakeLists.txt
@@ -14,4 +12,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.15
+Time Elapsed 00:00:00.13

@@ -2,9 +2,9 @@ C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/INSTALL.dir
 C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/ALL_BUILD.dir
 C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/ZERO_CHECK.dir
 C:/ACV/assignments/ACV-assignments/assignment1/build/src/CMakeFiles/INSTALL.dir
-C:/ACV/assignments/ACV-assignments/assignment1/build/src/dmarew/CMakeFiles/dmarew.dir
-C:/ACV/assignments/ACV-assignments/assignment1/build/src/dmarew/CMakeFiles/INSTALL.dir
-C:/ACV/assignments/ACV-assignments/assignment1/build/src/dmarew/CMakeFiles/ALL_BUILD.dir
+C:/ACV/assignments/ACV-assignments/assignment1/build/src/countSmartiesWithCanny/CMakeFiles/countSmartiesWithCanny.dir
+C:/ACV/assignments/ACV-assignments/assignment1/build/src/countSmartiesWithCanny/CMakeFiles/INSTALL.dir
+C:/ACV/assignments/ACV-assignments/assignment1/build/src/countSmartiesWithCanny/CMakeFiles/ALL_BUILD.dir
 C:/ACV/assignments/ACV-assignments/assignment1/build/src/colourSegmentation/CMakeFiles/colourSegmentation.dir
 C:/ACV/assignments/ACV-assignments/assignment1/build/src/colourSegmentation/CMakeFiles/INSTALL.dir
 C:/ACV/assignments/ACV-assignments/assignment1/build/src/colourSegmentation/CMakeFiles/ALL_BUILD.dir
@@ -14,6 +14,6 @@ C:/ACV/assignments/ACV-assignments/assignment1/build/src/kmeansSmartiesCounter/C
 C:/ACV/assignments/ACV-assignments/assignment1/build/src/morphologySmartiesCounter/CMakeFiles/morphologySmartiesCounter.dir
 C:/ACV/assignments/ACV-assignments/assignment1/build/src/morphologySmartiesCounter/CMakeFiles/INSTALL.dir
 C:/ACV/assignments/ACV-assignments/assignment1/build/src/morphologySmartiesCounter/CMakeFiles/ALL_BUILD.dir
-C:/ACV/assignments/ACV-assignments/assignment1/build/src/smartiesCounter/CMakeFiles/smartiesCounter.dir
-C:/ACV/assignments/ACV-assignments/assignment1/build/src/smartiesCounter/CMakeFiles/INSTALL.dir
-C:/ACV/assignments/ACV-assignments/assignment1/build/src/smartiesCounter/CMakeFiles/ALL_BUILD.dir
+C:/ACV/assignments/ACV-assignments/assignment1/build/src/dmarew/CMakeFiles/dmarew.dir
+C:/ACV/assignments/ACV-assignments/assignment1/build/src/dmarew/CMakeFiles/INSTALL.dir
+C:/ACV/assignments/ACV-assignments/assignment1/build/src/dmarew/CMakeFiles/ALL_BUILD.dir

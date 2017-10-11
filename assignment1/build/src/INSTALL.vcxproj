@@ -207,7 +207,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment1/build/ZERO_CHECK.vcxproj">
       <Project>69696C57-56F3-3B53-A0BB-E793BDCB51F9</Project>
     </ProjectReference>
-    <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment1/build/src/smartiesCounter/ALL_BUILD.vcxproj">
+    <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment1/build/src/morphologySmartiesCounter/ALL_BUILD.vcxproj">
       <Project>20A4A781-379F-34E2-9332-D8073276E594</Project>
     </ProjectReference>
   </ItemGroup>

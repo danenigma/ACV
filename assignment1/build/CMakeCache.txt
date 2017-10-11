@@ -179,6 +179,12 @@ colourSegmentation_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignme
 colourSegmentation_SOURCE_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment1/src/colourSegmentation
 
 //Value Computed by CMake
+countSmartiesWithCanny_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment1/build/src/countSmartiesWithCanny
+
+//Value Computed by CMake
+countSmartiesWithCanny_SOURCE_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment1/src/countSmartiesWithCanny
+
+//Value Computed by CMake
 dmarew_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment1/build/src/dmarew
 
 //Value Computed by CMake
@@ -195,12 +201,6 @@ morphologySmartiesCounter_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/a
 
 //Value Computed by CMake
 morphologySmartiesCounter_SOURCE_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment1/src/morphologySmartiesCounter
-
-//Value Computed by CMake
-smartiesCounter_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment1/build/src/smartiesCounter
-
-//Value Computed by CMake
-smartiesCounter_SOURCE_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment1/src/smartiesCounter
 
 
 ########################

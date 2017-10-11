@@ -164,6 +164,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment1/build/src/colourSegmentation/colourSegmentation.vcxproj">
       <Project>D9887A96-604B-379A-97F5-6B718E7475F4</Project>
     </ProjectReference>
+    <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment1/build/src/countSmartiesWithCanny/countSmartiesWithCanny.vcxproj">
+      <Project>DA199119-D72A-348A-A6F1-32D0BC816509</Project>
+    </ProjectReference>
     <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment1/build/src/dmarew/dmarew.vcxproj">
       <Project>0CA3BDA5-739E-3C31-B7C3-883F969B7984</Project>
     </ProjectReference>
@@ -172,9 +175,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ProjectReference>
     <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment1/build/src/morphologySmartiesCounter/morphologySmartiesCounter.vcxproj">
       <Project>DD258CD8-8C27-31F9-BBAA-45EE57209C93</Project>
-    </ProjectReference>
-    <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment1/build/src/smartiesCounter/smartiesCounter.vcxproj">
-      <Project>644B4A6F-3910-3452-95E4-203BCD03EEA2</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

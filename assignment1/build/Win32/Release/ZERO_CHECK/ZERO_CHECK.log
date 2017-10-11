@@ -1,18 +1,18 @@
-﻿Build started 10/10/2017 12:57:11 PM.
+﻿Build started 10/11/2017 6:05:29 AM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\ZERO_CHECK.vcxproj" on node 2 (rebuild target(s)).
-     1>_PrepareForClean:
-         Deleting file "Win32\Release\ZERO_CHECK\ZERO_CHECK.lastbuildstate".
+     1>PrepareForBuild:
+         Creating directory "C:\ACV\assignments\ACV-assignments\assignment1\build\Release\".
        InitializeBuildStatus:
          Creating "Win32\Release\ZERO_CHECK\ZERO_CHECK.unsuccessfulbuild" because "AlwaysCreate" was specified.
        CustomBuild:
          Checking Build System
          CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/generate.stamp is up-to-date.
          CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment1/build/src/CMakeFiles/generate.stamp is up-to-date.
-         CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment1/build/src/dmarew/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment1/build/src/countSmartiesWithCanny/CMakeFiles/generate.stamp is up-to-date.
          CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment1/build/src/colourSegmentation/CMakeFiles/generate.stamp is up-to-date.
          CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment1/build/src/kmeansSmartiesCounter/CMakeFiles/generate.stamp is up-to-date.
          CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment1/build/src/morphologySmartiesCounter/CMakeFiles/generate.stamp is up-to-date.
-         CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment1/build/src/smartiesCounter/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment1/build/src/dmarew/CMakeFiles/generate.stamp is up-to-date.
        FinalizeBuildStatus:
          Deleting file "Win32\Release\ZERO_CHECK\ZERO_CHECK.unsuccessfulbuild".
          Touching "Win32\Release\ZERO_CHECK\ZERO_CHECK.lastbuildstate".
@@ -20,4 +20,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.39
+Time Elapsed 00:00:00.24

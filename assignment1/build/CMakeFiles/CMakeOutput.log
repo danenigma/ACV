@@ -10,7 +10,7 @@ Microsoft (R) Build Engine version 4.6.1586.0
 [Microsoft .NET Framework, version 4.0.30319.42000]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 10/7/2017 2:27:29 AM.
+Build started 10/11/2017 6:01:08 AM.
 Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\3.7.1\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
@@ -37,7 +37,7 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:02.74
+Time Elapsed 00:00:00.41
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -57,7 +57,7 @@ Microsoft (R) Build Engine version 4.6.1586.0
 [Microsoft .NET Framework, version 4.0.30319.42000]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 10/7/2017 2:27:32 AM.
+Build started 10/11/2017 6:01:09 AM.
 Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\3.7.1\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
@@ -84,7 +84,7 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.59
+Time Elapsed 00:00:00.45
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -96,189 +96,189 @@ The CXX compiler identification is MSVC, found in "C:/ACV/assignments/ACV-assign
 Determining if the C compiler works passed with the following output:
 Change Dir: C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_39cbe.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=10.0"
+Run Build Command:"C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_b1c5f.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=10.0"
 Microsoft (R) Build Engine version 4.6.1586.0
 [Microsoft .NET Framework, version 4.0.30319.42000]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 10/7/2017 2:27:33 AM.
-Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_39cbe.vcxproj" on node 1 (default targets).
+Build started 10/11/2017 6:01:10 AM.
+Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_b1c5f.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_39cbe.dir\Debug\".
+  Creating directory "cmTC_b1c5f.dir\Debug\".
   Creating directory "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\".
 InitializeBuildStatus:
-  Creating "cmTC_39cbe.dir\Debug\cmTC_39cbe.unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_b1c5f.dir\Debug\cmTC_b1c5f.unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_39cbe.dir\Debug\\" /Fd"cmTC_39cbe.dir\Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:queue testCCompiler.c
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_b1c5f.dir\Debug\\" /Fd"cmTC_b1c5f.dir\Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:queue testCCompiler.c
   Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_39cbe.dir\Debug\\" /Fd"cmTC_39cbe.dir\Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:queue testCCompiler.c
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_b1c5f.dir\Debug\\" /Fd"cmTC_b1c5f.dir\Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:queue testCCompiler.c
   
   testCCompiler.c
 ManifestResourceCompile:
-  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_39cbe.dir\Debug\cmTC_39cbe.exe.embed.manifest.res" cmTC_39cbe.dir\Debug\cmTC_39cbe_manifest.rc 
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_b1c5f.dir\Debug\cmTC_b1c5f.exe.embed.manifest.res" cmTC_b1c5f.dir\Debug\cmTC_b1c5f_manifest.rc 
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_39cbe.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_39cbe.dir\Debug\cmTC_39cbe.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_39cbe.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_39cbe.lib" /MACHINE:X86 cmTC_39cbe.dir\Debug\cmTC_39cbe.exe.embed.manifest.res
-  cmTC_39cbe.dir\Debug\testCCompiler.obj  /machine:X86 
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_b1c5f.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_b1c5f.dir\Debug\cmTC_b1c5f.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_b1c5f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_b1c5f.lib" /MACHINE:X86 cmTC_b1c5f.dir\Debug\cmTC_b1c5f.exe.embed.manifest.res
+  cmTC_b1c5f.dir\Debug\testCCompiler.obj  /machine:X86 
 Manifest:
-  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTC_39cbe.dir\Debug\cmTC_39cbe.exe.embed.manifest" /manifest cmTC_39cbe.dir\Debug\cmTC_39cbe.exe.intermediate.manifest
-  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_39cbe.dir\Debug\cmTC_39cbe.exe.embed.manifest.res" cmTC_39cbe.dir\Debug\cmTC_39cbe_manifest.rc 
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTC_b1c5f.dir\Debug\cmTC_b1c5f.exe.embed.manifest" /manifest cmTC_b1c5f.dir\Debug\cmTC_b1c5f.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_b1c5f.dir\Debug\cmTC_b1c5f.exe.embed.manifest.res" cmTC_b1c5f.dir\Debug\cmTC_b1c5f_manifest.rc 
 LinkEmbedManifest:
-  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_39cbe.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_39cbe.dir\Debug\cmTC_39cbe.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_39cbe.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_39cbe.lib" /MACHINE:X86 cmTC_39cbe.dir\Debug\cmTC_39cbe.exe.embed.manifest.res
-  cmTC_39cbe.dir\Debug\testCCompiler.obj  /machine:X86 
-  cmTC_39cbe.vcxproj -> C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_39cbe.exe
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_b1c5f.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_b1c5f.dir\Debug\cmTC_b1c5f.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_b1c5f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_b1c5f.lib" /MACHINE:X86 cmTC_b1c5f.dir\Debug\cmTC_b1c5f.exe.embed.manifest.res
+  cmTC_b1c5f.dir\Debug\testCCompiler.obj  /machine:X86 
+  cmTC_b1c5f.vcxproj -> C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_b1c5f.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_39cbe.dir\Debug\cmTC_39cbe.unsuccessfulbuild".
-  Touching "cmTC_39cbe.dir\Debug\cmTC_39cbe.lastbuildstate".
-Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_39cbe.vcxproj" (default targets).
+  Deleting file "cmTC_b1c5f.dir\Debug\cmTC_b1c5f.unsuccessfulbuild".
+  Touching "cmTC_b1c5f.dir\Debug\cmTC_b1c5f.lastbuildstate".
+Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_b1c5f.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.67
+Time Elapsed 00:00:01.14
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_27ed3.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=10.0"
+Run Build Command:"C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_80fbe.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=10.0"
 Microsoft (R) Build Engine version 4.6.1586.0
 [Microsoft .NET Framework, version 4.0.30319.42000]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 10/7/2017 2:27:35 AM.
-Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_27ed3.vcxproj" on node 1 (default targets).
+Build started 10/11/2017 6:01:11 AM.
+Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_80fbe.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_27ed3.dir\Debug\".
+  Creating directory "cmTC_80fbe.dir\Debug\".
   Creating directory "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\".
 InitializeBuildStatus:
-  Creating "cmTC_27ed3.dir\Debug\cmTC_27ed3.unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_80fbe.dir\Debug\cmTC_80fbe.unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_27ed3.dir\Debug\\" /Fd"cmTC_27ed3.dir\Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\Program Files (x86)\CMake\share\cmake-3.7\Modules\CMakeCCompilerABI.c"
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_80fbe.dir\Debug\\" /Fd"cmTC_80fbe.dir\Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\Program Files (x86)\CMake\share\cmake-3.7\Modules\CMakeCCompilerABI.c"
   Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_27ed3.dir\Debug\\" /Fd"cmTC_27ed3.dir\Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\Program Files (x86)\CMake\share\cmake-3.7\Modules\CMakeCCompilerABI.c"
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_80fbe.dir\Debug\\" /Fd"cmTC_80fbe.dir\Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\Program Files (x86)\CMake\share\cmake-3.7\Modules\CMakeCCompilerABI.c"
   
   CMakeCCompilerABI.c
 ManifestResourceCompile:
-  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_27ed3.dir\Debug\cmTC_27ed3.exe.embed.manifest.res" cmTC_27ed3.dir\Debug\cmTC_27ed3_manifest.rc 
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_80fbe.dir\Debug\cmTC_80fbe.exe.embed.manifest.res" cmTC_80fbe.dir\Debug\cmTC_80fbe_manifest.rc 
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_27ed3.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_27ed3.dir\Debug\cmTC_27ed3.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_27ed3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_27ed3.lib" /MACHINE:X86 cmTC_27ed3.dir\Debug\cmTC_27ed3.exe.embed.manifest.res
-  cmTC_27ed3.dir\Debug\CMakeCCompilerABI.obj  /machine:X86 
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_80fbe.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_80fbe.dir\Debug\cmTC_80fbe.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_80fbe.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_80fbe.lib" /MACHINE:X86 cmTC_80fbe.dir\Debug\cmTC_80fbe.exe.embed.manifest.res
+  cmTC_80fbe.dir\Debug\CMakeCCompilerABI.obj  /machine:X86 
 Manifest:
-  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTC_27ed3.dir\Debug\cmTC_27ed3.exe.embed.manifest" /manifest cmTC_27ed3.dir\Debug\cmTC_27ed3.exe.intermediate.manifest
-  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_27ed3.dir\Debug\cmTC_27ed3.exe.embed.manifest.res" cmTC_27ed3.dir\Debug\cmTC_27ed3_manifest.rc 
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTC_80fbe.dir\Debug\cmTC_80fbe.exe.embed.manifest" /manifest cmTC_80fbe.dir\Debug\cmTC_80fbe.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_80fbe.dir\Debug\cmTC_80fbe.exe.embed.manifest.res" cmTC_80fbe.dir\Debug\cmTC_80fbe_manifest.rc 
 LinkEmbedManifest:
-  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_27ed3.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_27ed3.dir\Debug\cmTC_27ed3.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_27ed3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_27ed3.lib" /MACHINE:X86 cmTC_27ed3.dir\Debug\cmTC_27ed3.exe.embed.manifest.res
-  cmTC_27ed3.dir\Debug\CMakeCCompilerABI.obj  /machine:X86 
-  cmTC_27ed3.vcxproj -> C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_27ed3.exe
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_80fbe.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_80fbe.dir\Debug\cmTC_80fbe.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_80fbe.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_80fbe.lib" /MACHINE:X86 cmTC_80fbe.dir\Debug\cmTC_80fbe.exe.embed.manifest.res
+  cmTC_80fbe.dir\Debug\CMakeCCompilerABI.obj  /machine:X86 
+  cmTC_80fbe.vcxproj -> C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_80fbe.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_27ed3.dir\Debug\cmTC_27ed3.unsuccessfulbuild".
-  Touching "cmTC_27ed3.dir\Debug\cmTC_27ed3.lastbuildstate".
-Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_27ed3.vcxproj" (default targets).
+  Deleting file "cmTC_80fbe.dir\Debug\cmTC_80fbe.unsuccessfulbuild".
+  Touching "cmTC_80fbe.dir\Debug\cmTC_80fbe.lastbuildstate".
+Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_80fbe.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.17
+Time Elapsed 00:00:01.29
 
 
 Determining if the CXX compiler works passed with the following output:
 Change Dir: C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_87636.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=10.0"
+Run Build Command:"C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_fc5ea.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=10.0"
 Microsoft (R) Build Engine version 4.6.1586.0
 [Microsoft .NET Framework, version 4.0.30319.42000]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 10/7/2017 2:27:36 AM.
-Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_87636.vcxproj" on node 1 (default targets).
+Build started 10/11/2017 6:01:13 AM.
+Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_fc5ea.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_87636.dir\Debug\".
+  Creating directory "cmTC_fc5ea.dir\Debug\".
   Creating directory "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\".
 InitializeBuildStatus:
-  Creating "cmTC_87636.dir\Debug\cmTC_87636.unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_fc5ea.dir\Debug\cmTC_fc5ea.unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_87636.dir\Debug\\" /Fd"cmTC_87636.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:queue testCXXCompiler.cxx
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_fc5ea.dir\Debug\\" /Fd"cmTC_fc5ea.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:queue testCXXCompiler.cxx
   Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_87636.dir\Debug\\" /Fd"cmTC_87636.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:queue testCXXCompiler.cxx
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_fc5ea.dir\Debug\\" /Fd"cmTC_fc5ea.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:queue testCXXCompiler.cxx
   
   testCXXCompiler.cxx
 ManifestResourceCompile:
-  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_87636.dir\Debug\cmTC_87636.exe.embed.manifest.res" cmTC_87636.dir\Debug\cmTC_87636_manifest.rc 
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_fc5ea.dir\Debug\cmTC_fc5ea.exe.embed.manifest.res" cmTC_fc5ea.dir\Debug\cmTC_fc5ea_manifest.rc 
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_87636.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_87636.dir\Debug\cmTC_87636.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_87636.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_87636.lib" /MACHINE:X86 cmTC_87636.dir\Debug\cmTC_87636.exe.embed.manifest.res
-  cmTC_87636.dir\Debug\testCXXCompiler.obj  /machine:X86 
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_fc5ea.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_fc5ea.dir\Debug\cmTC_fc5ea.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_fc5ea.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_fc5ea.lib" /MACHINE:X86 cmTC_fc5ea.dir\Debug\cmTC_fc5ea.exe.embed.manifest.res
+  cmTC_fc5ea.dir\Debug\testCXXCompiler.obj  /machine:X86 
 Manifest:
-  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTC_87636.dir\Debug\cmTC_87636.exe.embed.manifest" /manifest cmTC_87636.dir\Debug\cmTC_87636.exe.intermediate.manifest
-  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_87636.dir\Debug\cmTC_87636.exe.embed.manifest.res" cmTC_87636.dir\Debug\cmTC_87636_manifest.rc 
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTC_fc5ea.dir\Debug\cmTC_fc5ea.exe.embed.manifest" /manifest cmTC_fc5ea.dir\Debug\cmTC_fc5ea.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_fc5ea.dir\Debug\cmTC_fc5ea.exe.embed.manifest.res" cmTC_fc5ea.dir\Debug\cmTC_fc5ea_manifest.rc 
 LinkEmbedManifest:
-  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_87636.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_87636.dir\Debug\cmTC_87636.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_87636.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_87636.lib" /MACHINE:X86 cmTC_87636.dir\Debug\cmTC_87636.exe.embed.manifest.res
-  cmTC_87636.dir\Debug\testCXXCompiler.obj  /machine:X86 
-  cmTC_87636.vcxproj -> C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_87636.exe
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_fc5ea.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_fc5ea.dir\Debug\cmTC_fc5ea.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_fc5ea.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_fc5ea.lib" /MACHINE:X86 cmTC_fc5ea.dir\Debug\cmTC_fc5ea.exe.embed.manifest.res
+  cmTC_fc5ea.dir\Debug\testCXXCompiler.obj  /machine:X86 
+  cmTC_fc5ea.vcxproj -> C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_fc5ea.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_87636.dir\Debug\cmTC_87636.unsuccessfulbuild".
-  Touching "cmTC_87636.dir\Debug\cmTC_87636.lastbuildstate".
-Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_87636.vcxproj" (default targets).
+  Deleting file "cmTC_fc5ea.dir\Debug\cmTC_fc5ea.unsuccessfulbuild".
+  Touching "cmTC_fc5ea.dir\Debug\cmTC_fc5ea.lastbuildstate".
+Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_fc5ea.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.32
+Time Elapsed 00:00:01.05
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_ee2b6.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=10.0"
+Run Build Command:"C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_2ee01.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=10.0"
 Microsoft (R) Build Engine version 4.6.1586.0
 [Microsoft .NET Framework, version 4.0.30319.42000]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 10/7/2017 2:27:38 AM.
-Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_ee2b6.vcxproj" on node 1 (default targets).
+Build started 10/11/2017 6:01:14 AM.
+Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_2ee01.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_ee2b6.dir\Debug\".
+  Creating directory "cmTC_2ee01.dir\Debug\".
   Creating directory "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\".
 InitializeBuildStatus:
-  Creating "cmTC_ee2b6.dir\Debug\cmTC_ee2b6.unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_2ee01.dir\Debug\cmTC_2ee01.unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_ee2b6.dir\Debug\\" /Fd"cmTC_ee2b6.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:queue "..\..\..\..\..\..\..\Program Files (x86)\CMake\share\cmake-3.7\Modules\CMakeCXXCompilerABI.cpp"
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_2ee01.dir\Debug\\" /Fd"cmTC_2ee01.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:queue "..\..\..\..\..\..\..\Program Files (x86)\CMake\share\cmake-3.7\Modules\CMakeCXXCompilerABI.cpp"
   Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_ee2b6.dir\Debug\\" /Fd"cmTC_ee2b6.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:queue "..\..\..\..\..\..\..\Program Files (x86)\CMake\share\cmake-3.7\Modules\CMakeCXXCompilerABI.cpp"
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_2ee01.dir\Debug\\" /Fd"cmTC_2ee01.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:queue "..\..\..\..\..\..\..\Program Files (x86)\CMake\share\cmake-3.7\Modules\CMakeCXXCompilerABI.cpp"
   
   CMakeCXXCompilerABI.cpp
 ManifestResourceCompile:
-  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_ee2b6.dir\Debug\cmTC_ee2b6.exe.embed.manifest.res" cmTC_ee2b6.dir\Debug\cmTC_ee2b6_manifest.rc 
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_2ee01.dir\Debug\cmTC_2ee01.exe.embed.manifest.res" cmTC_2ee01.dir\Debug\cmTC_2ee01_manifest.rc 
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_ee2b6.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_ee2b6.dir\Debug\cmTC_ee2b6.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_ee2b6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_ee2b6.lib" /MACHINE:X86 cmTC_ee2b6.dir\Debug\cmTC_ee2b6.exe.embed.manifest.res
-  cmTC_ee2b6.dir\Debug\CMakeCXXCompilerABI.obj  /machine:X86 
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_2ee01.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_2ee01.dir\Debug\cmTC_2ee01.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_2ee01.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_2ee01.lib" /MACHINE:X86 cmTC_2ee01.dir\Debug\cmTC_2ee01.exe.embed.manifest.res
+  cmTC_2ee01.dir\Debug\CMakeCXXCompilerABI.obj  /machine:X86 
 Manifest:
-  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTC_ee2b6.dir\Debug\cmTC_ee2b6.exe.embed.manifest" /manifest cmTC_ee2b6.dir\Debug\cmTC_ee2b6.exe.intermediate.manifest
-  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_ee2b6.dir\Debug\cmTC_ee2b6.exe.embed.manifest.res" cmTC_ee2b6.dir\Debug\cmTC_ee2b6_manifest.rc 
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTC_2ee01.dir\Debug\cmTC_2ee01.exe.embed.manifest" /manifest cmTC_2ee01.dir\Debug\cmTC_2ee01.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_2ee01.dir\Debug\cmTC_2ee01.exe.embed.manifest.res" cmTC_2ee01.dir\Debug\cmTC_2ee01_manifest.rc 
 LinkEmbedManifest:
-  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_ee2b6.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_ee2b6.dir\Debug\cmTC_ee2b6.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_ee2b6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_ee2b6.lib" /MACHINE:X86 cmTC_ee2b6.dir\Debug\cmTC_ee2b6.exe.embed.manifest.res
-  cmTC_ee2b6.dir\Debug\CMakeCXXCompilerABI.obj  /machine:X86 
-  cmTC_ee2b6.vcxproj -> C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_ee2b6.exe
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_2ee01.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_2ee01.dir\Debug\cmTC_2ee01.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_2ee01.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_2ee01.lib" /MACHINE:X86 cmTC_2ee01.dir\Debug\cmTC_2ee01.exe.embed.manifest.res
+  cmTC_2ee01.dir\Debug\CMakeCXXCompilerABI.obj  /machine:X86 
+  cmTC_2ee01.vcxproj -> C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_2ee01.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_ee2b6.dir\Debug\cmTC_ee2b6.unsuccessfulbuild".
-  Touching "cmTC_ee2b6.dir\Debug\cmTC_ee2b6.lastbuildstate".
-Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_ee2b6.vcxproj" (default targets).
+  Deleting file "cmTC_2ee01.dir\Debug\cmTC_2ee01.unsuccessfulbuild".
+  Touching "cmTC_2ee01.dir\Debug\cmTC_2ee01.lastbuildstate".
+Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_2ee01.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.24
+Time Elapsed 00:00:01.13
 
 
 
@@ -286,48 +286,48 @@ Time Elapsed 00:00:01.24
 Detecting CXX [] compiler features compiled with the following output:
 Change Dir: C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_d0baf.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=10.0"
+Run Build Command:"C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_4fe21.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=10.0"
 Microsoft (R) Build Engine version 4.6.1586.0
 [Microsoft .NET Framework, version 4.0.30319.42000]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 10/7/2017 2:27:40 AM.
-Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_d0baf.vcxproj" on node 1 (default targets).
+Build started 10/11/2017 6:01:15 AM.
+Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_4fe21.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_d0baf.dir\Debug\".
+  Creating directory "cmTC_4fe21.dir\Debug\".
   Creating directory "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\".
 InitializeBuildStatus:
-  Creating "cmTC_d0baf.dir\Debug\cmTC_d0baf.unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_4fe21.dir\Debug\cmTC_4fe21.unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_d0baf.dir\Debug\\" /Fd"cmTC_d0baf.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:queue ..\feature_tests.cxx
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_4fe21.dir\Debug\\" /Fd"cmTC_4fe21.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:queue ..\feature_tests.cxx
   Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_d0baf.dir\Debug\\" /Fd"cmTC_d0baf.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:queue ..\feature_tests.cxx
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_4fe21.dir\Debug\\" /Fd"cmTC_4fe21.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:queue ..\feature_tests.cxx
   
   feature_tests.cxx
 ManifestResourceCompile:
-  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_d0baf.dir\Debug\cmTC_d0baf.exe.embed.manifest.res" cmTC_d0baf.dir\Debug\cmTC_d0baf_manifest.rc 
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_4fe21.dir\Debug\cmTC_4fe21.exe.embed.manifest.res" cmTC_4fe21.dir\Debug\cmTC_4fe21_manifest.rc 
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_d0baf.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_d0baf.dir\Debug\cmTC_d0baf.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_d0baf.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_d0baf.lib" /MACHINE:X86 cmTC_d0baf.dir\Debug\cmTC_d0baf.exe.embed.manifest.res
-  cmTC_d0baf.dir\Debug\feature_tests.obj  /machine:X86 
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_4fe21.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_4fe21.dir\Debug\cmTC_4fe21.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_4fe21.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_4fe21.lib" /MACHINE:X86 cmTC_4fe21.dir\Debug\cmTC_4fe21.exe.embed.manifest.res
+  cmTC_4fe21.dir\Debug\feature_tests.obj  /machine:X86 
 Manifest:
-  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTC_d0baf.dir\Debug\cmTC_d0baf.exe.embed.manifest" /manifest cmTC_d0baf.dir\Debug\cmTC_d0baf.exe.intermediate.manifest
-  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_d0baf.dir\Debug\cmTC_d0baf.exe.embed.manifest.res" cmTC_d0baf.dir\Debug\cmTC_d0baf_manifest.rc 
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTC_4fe21.dir\Debug\cmTC_4fe21.exe.embed.manifest" /manifest cmTC_4fe21.dir\Debug\cmTC_4fe21.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTC_4fe21.dir\Debug\cmTC_4fe21.exe.embed.manifest.res" cmTC_4fe21.dir\Debug\cmTC_4fe21_manifest.rc 
 LinkEmbedManifest:
-  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_d0baf.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_d0baf.dir\Debug\cmTC_d0baf.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_d0baf.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_d0baf.lib" /MACHINE:X86 cmTC_d0baf.dir\Debug\cmTC_d0baf.exe.embed.manifest.res
-  cmTC_d0baf.dir\Debug\feature_tests.obj  /machine:X86 
-  cmTC_d0baf.vcxproj -> C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_d0baf.exe
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_4fe21.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTC_4fe21.dir\Debug\cmTC_4fe21.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_4fe21.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment1/build/CMakeFiles/CMakeTmp/Debug/cmTC_4fe21.lib" /MACHINE:X86 cmTC_4fe21.dir\Debug\cmTC_4fe21.exe.embed.manifest.res
+  cmTC_4fe21.dir\Debug\feature_tests.obj  /machine:X86 
+  cmTC_4fe21.vcxproj -> C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\Debug\cmTC_4fe21.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_d0baf.dir\Debug\cmTC_d0baf.unsuccessfulbuild".
-  Touching "cmTC_d0baf.dir\Debug\cmTC_d0baf.lastbuildstate".
-Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_d0baf.vcxproj" (default targets).
+  Deleting file "cmTC_4fe21.dir\Debug\cmTC_4fe21.unsuccessfulbuild".
+  Touching "cmTC_4fe21.dir\Debug\cmTC_4fe21.lastbuildstate".
+Done Building Project "C:\ACV\assignments\ACV-assignments\assignment1\build\CMakeFiles\CMakeTmp\cmTC_4fe21.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.18
+Time Elapsed 00:00:01.01
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
