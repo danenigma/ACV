@@ -1,4 +1,4 @@
-﻿Build started 10/11/2017 7:59:03 AM.
+﻿Build started 10/11/2017 2:55:46 PM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\countSmartiesWithCanny\countSmartiesWithCanny.vcxproj" on node 3 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "countSmartiesWithCanny.dir\Release\countSmartiesWithCanny.lastbuildstate".
@@ -28,4 +28,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.19
+Time Elapsed 00:00:03.56

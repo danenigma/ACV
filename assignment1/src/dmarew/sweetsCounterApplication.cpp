@@ -2,18 +2,7 @@
  
 #include "sweetsCounter.h"
  
-/*
-    Assumptions:
 
-	- all the color types of Smarties appear on the image
-	- size of the Smarties is uniform and don't differ from(may be slightly) the test images  
-	- white background
-	- speed is not much of a concern (kmeans takes time)
-	Limitations[so far]
-	- if all the Smarty types are not represented in the image ,since we have fixed number
-	  of clusters on the kmeans setup, we might count some of the smarties more than once
-
-*/
 Mat inputImage;
 
 
@@ -54,7 +43,7 @@ int main() {
          printf("Press any key to continue ...\n");
 
 		 
-		 smartiesCount = count_smarties();
+		 smartiesCount = count_sweets();
 		 stringstream ss;
 		 ss << filename <<": "<<smartiesCount<<" sweets";
 		 fprintf(fp_out,"%s\n",ss.str());

@@ -1,4 +1,4 @@
-﻿Build started 10/11/2017 7:59:03 AM.
+﻿Build started 10/11/2017 2:55:47 PM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\src\kmeansSmartiesCounter\kmeansSmartiesCounter.vcxproj" on node 5 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "kmeansSmartiesCounter.dir\Release\kmeansSmartiesCounter.lastbuildstate".
@@ -29,4 +29,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.94
+Time Elapsed 00:00:03.34

@@ -1,4 +1,4 @@
-﻿Build started 10/11/2017 7:59:02 AM.
+﻿Build started 10/11/2017 2:55:46 PM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment1\build\ZERO_CHECK.vcxproj" on node 2 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "Win32\Release\ZERO_CHECK\ZERO_CHECK.lastbuildstate".
@@ -20,4 +20,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.12
+Time Elapsed 00:00:00.20
