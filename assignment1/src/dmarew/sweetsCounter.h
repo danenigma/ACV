@@ -92,7 +92,7 @@ Summary of Testing
 			31 sweets with some overlap and slight variation in the 
 			size of the sweets introduced by of the viewing angle of 
 			the camera
-			Wrong count(30) it counts all but one (which was to small compared 
+			Wrong count(30) it counts all but one (which was too small compared to
 							the other sweets)
 
 	-7  test:
@@ -116,7 +116,7 @@ Summary of Testing
 
 
 	limitation:
-	- Can not handle too much overlaping
+	- Can not handle too much overlapping
 	- Works only for white background images(needs modification to work with other color backgrounds)
 
     Assumptions:
