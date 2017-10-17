@@ -1,3 +1,3 @@
 ADD_SUBDIRECTORY(dmarew)
-
+ADD_SUBDIRECTORY(test)
 

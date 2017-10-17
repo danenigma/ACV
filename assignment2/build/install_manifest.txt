@@ -1,1 +1,2 @@
 C:/ACV/assignments/ACV-assignments/assignment2/bin/dmarew.exe
+C:/ACV/assignments/ACV-assignments/assignment2/bin/test.exe

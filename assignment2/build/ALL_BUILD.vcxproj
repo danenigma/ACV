@@ -164,6 +164,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment2/build/src/dmarew/dmarew.vcxproj">
       <Project>9FE67167-E2DD-3882-A00B-05FC1268344C</Project>
     </ProjectReference>
+    <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment2/build/src/test/test.vcxproj">
+      <Project>FE03AC91-31CF-3B9A-9AD0-3C7EA2270764</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
