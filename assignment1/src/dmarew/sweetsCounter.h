@@ -25,7 +25,7 @@ Summary of Testing
    -> Read image ../data/filename (check if empty) 
    -> Call count_sweets() function on the image
 	
-		Step-1 BlurImage with a gaussian to remove noise(extract large structures)
+		Step-1 BlurImage with a Gaussian kernel to remove noise(extract large structures)
 		Step-2 Remove white and gray(shadow) background.
 			 -We remove colors near and on the achromatic axis
 		Step-3 Convert to gray scale image (if not grayscale already)
@@ -38,41 +38,97 @@ Summary of Testing
 			 - The local maxima represent regions that are the farthest from the background in this case the centers of the
 			   sweets.
 			 - problem:
-					if the sweets are overlaping, the overlapping region would have large L2 distance as well hence the would result
-					in  local maxima
-			 - Solution(see step -11): coming up with the right threshold that will differentiate overlaping regions from the center of 
+					if the sweets are overlaping, the overlapping region would have large L2 distance as well, hence resulting
+					a local maxima
+			 - Solution(see Step-11): coming up with the right threshold that will differentiate overlapping regions from the center of 
 						the sweets
   		Step-10 Dilate the local maxima.
-			- We dilate the local maxima so local maxima that are very close to one another will join up
-			  when we dilate them(to avoid double counting)
+			- We dilate the local maxima so that local maxima that are very close to one another will join up
+			  and become one sigle maximum
 			- Typically we expect one local maxima per one sweet
   		Step-11 Compute the mean intensity of the distance transform image(dilated)
 			
 			- The mean intensity is the mean distance from the background(for the local maxima)
-  			- Since the sweets are of similar size we would expect their corresponding local maxima to have similar values.
+  			- Since the sweets are of similar size, we would expect their corresponding local maxima to have similar values.
 			  That means local maxima that differ from the mean intensity by a significant amount are not sweets.
 			  Mostly these local maxima arise from overlapping sweets. Hence the the overlapping factor (overlapParam)
-			  determins the amount of overlapping we are willing to tolerate.(For the test images I found 0.75 to be a
-			  good factor i.e local maxima with intensity(distance from background) less than 3/4th of the mean intensity
+			  determins the amount of overlapping we are willing to tolerate.(For the test images we find that 0.75 to be a
+			  good factor. i.e local maxima with intensity(distance from background) less than 3/4th of the mean intensity
 			  will be filtered out.
-			- since this threshold depends on the mean intensity it is adaptive to different images.
+			- Since this threshold depends on the mean intensity it is adaptive to different images(we compute different thresholds
+				for different images).
 		Step-12 Theshold the distance transform image with the threshold we got by computing the mean intesity
 		Step-13 Finally do Component Anaylsis i.e find all the contours(the number of contours=the number of sweets).
-Summary of Testing 
+Summary of Testing
+	- First I tested the algorithm with the provided test images 
+	- After finding the right values for the different parameters I tested the algorithm on different images
+	  By varying the number of sweets, the degree of overlap , size and camera viewing angle
+
+	-1
+		test:
+			two overlapping sweets
+		result:
+			Correct count(2)
+	-2 
+		test:
+			three sweets with two overlaps
+		result:
+			Correct count(3)
+	-3 
+		test:
+			three sweets with three light overlaps
+		result:
+			Correct count(3)
+	-4
+		test:
+			three sweets with three large overlaps
+		result:
+			Wrong count(2)
+	-5	test:
+			five sweets with five overlaps
+		result:
+			Correct count(5)
+	-6 test:
+			31 sweets with some overlap and slight variation in the 
+			size of the sweets introduced by of the viewing angle of 
+			the camera
+			Wrong count(30) it counts all but one (which was to small compared 
+							the other sweets)
+
+	-7  test:
+			38 sweets with some overlap(edited the original test image(30) sweets)
+		result:
+			Correct count(38)
+
+	-8  test:
+			small sweets slightly touching
+			Correct count(8)
+		result:
+
+	-9  test:
+			larg none overlapping sweets
+			
+		result:
+			Correct count(28)
+
+
+
+
+
 	limitation:
 	- Can not handle too much overlaping
-	- Works only for white background images
+	- Works only for white background images(needs modification to work with other color backgrounds)
 
     Assumptions:
 
 	- White background
-	- The smarties have the relativly similar size. 	
+	- The smarties have relativly similar sizes. 	
 	
 	
 	Main parameters that needed tuning:
-		1. overlap allowed(for getting the threshold for the distance transform)
-		2. local maxima window size (depends on the size of the sweets workes well for the test images)
-		3. backgroundness parameter (a chromatic axis) (any thing with bgr values > 240 or b=g=r)
+		1. Overlap allowed(for getting the threshold for the distance transform)
+		2. Local maxima window size (depends on the size of the sweets workes well for the test images)
+		3. backgroundness parameter (Achromatic axis) (any thing with bgr values > 240 or b=g=r)
 
 
 

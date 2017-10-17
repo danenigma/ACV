@@ -1,0 +1,5 @@
+dmarew
+../data/assignment2A.jpg: 0 defective sweets
+../data/assignment2B.jpg: 4 defective sweets
+../data/assignment2C.jpg: 0 defective sweets
+../data/assignment2D.jpg: 1 defective sweets

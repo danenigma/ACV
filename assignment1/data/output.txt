@@ -1,0 +1,2 @@
+dmarew
+../data/assignment1A.jpg: 20 sweets

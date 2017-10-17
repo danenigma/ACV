@@ -1,0 +1,29 @@
+# CMake generation dependency list for this directory.
+C:/ACV/assignments/ACV-assignments/assignment2/CMakeLists.txt
+C:/ACV/assignments/ACV-assignments/assignment2/build/CMakeFiles/3.7.1/CMakeSystem.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.7/Modules/CMakeSystemSpecificInitialize.cmake
+C:/ACV/assignments/ACV-assignments/assignment2/build/CMakeFiles/3.7.1/CMakeCCompiler.cmake
+C:/ACV/assignments/ACV-assignments/assignment2/build/CMakeFiles/3.7.1/CMakeCXXCompiler.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.7/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.7/Modules/CMakeGenericSystem.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.7/Modules/Platform/Windows.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.7/Modules/Platform/WindowsPaths.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.7/Modules/CMakeCInformation.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.7/Modules/CMakeLanguageInformation.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.7/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.7/Modules/Platform/Windows-MSVC.cmake
+C:/ACV/assignments/ACV-assignments/assignment2/build/CMakeFiles/3.7.1/CMakeRCCompiler.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.7/Modules/CMakeRCInformation.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.7/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.7/Modules/CMakeCXXInformation.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.7/Modules/CMakeLanguageInformation.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.7/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.7/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.7/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.7/Modules/CMakeCommonLanguageInclude.cmake
+C:/opencv/build/OpenCVConfig-version.cmake
+C:/opencv/build/OpenCVConfig.cmake
+C:/opencv/build/x86/vc10/lib/OpenCVConfig.cmake
+C:/opencv/build/x86/vc10/lib/OpenCVModules.cmake
+C:/opencv/build/x86/vc10/lib/OpenCVModules-debug.cmake
+C:/opencv/build/x86/vc10/lib/OpenCVModules-release.cmake
