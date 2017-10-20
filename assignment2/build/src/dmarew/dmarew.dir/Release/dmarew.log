@@ -1,12 +1,12 @@
-﻿Build started 10/17/2017 9:19:47 AM.
-     1>Project "C:\ACV\assignments\ACV-assignments\assignment2\build\src\dmarew\dmarew.vcxproj" on node 2 (build target(s)).
-     1>InitializeBuildStatus:
+﻿Build started 10/20/2017 4:16:45 PM.
+     1>Project "C:\ACV\assignments\ACV-assignments\assignment2\build\src\dmarew\dmarew.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "dmarew.dir\Release\dmarew.lastbuildstate".
+       InitializeBuildStatus:
          Creating "dmarew.dir\Release\dmarew.unsuccessfulbuild" because "AlwaysCreate" was specified.
        CustomBuild:
          Building Custom Rule C:/ACV/assignments/ACV-assignments/assignment2/src/dmarew/CMakeLists.txt
          CMake does not need to re-run because C:\ACV\assignments\ACV-assignments\assignment2\build\src\dmarew\CMakeFiles\generate.stamp is up-to-date.
-       MakeDirsForCl:
-         Creating directory "C:\ACV\assignments\ACV-assignments\assignment2\build\src\dmarew\Release".
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\opencv\build\include /IC:\opencv\build\include\opencv /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_DEPRECATE /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"dmarew.dir\Release\\" /Fd"dmarew.dir\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\dmarew\defectiveSweetsCounterApplication.cpp ..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp
          defectiveSweetsCounterApplication.cpp
@@ -26,8 +26,8 @@
        FinalizeBuildStatus:
          Deleting file "dmarew.dir\Release\dmarew.unsuccessfulbuild".
          Touching "dmarew.dir\Release\dmarew.lastbuildstate".
-     1>Done Building Project "C:\ACV\assignments\ACV-assignments\assignment2\build\src\dmarew\dmarew.vcxproj" (build target(s)).
+     1>Done Building Project "C:\ACV\assignments\ACV-assignments\assignment2\build\src\dmarew\dmarew.vcxproj" (rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.79
+Time Elapsed 00:00:03.37

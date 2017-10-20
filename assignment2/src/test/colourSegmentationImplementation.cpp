@@ -9,7 +9,7 @@ using namespace std;
 #define CL_GREEN Scalar(0,255,0)
 #define CL_YELLOW Scalar(0,255,255    )
 
-int smoothSize = 5;
+int smoothSize = 0;
 int numBins = 8;
 int borderType = BORDER_REPLICATE;
 std::string winName = "Histograms";
@@ -27,6 +27,7 @@ struct histSerie {
         Title(_Title), lineColor(_lineColor), lineWidth(_lineWidth), 
         drawLocalMax(_drawLocalMax)  {_hist.copyTo(hist); }
 };
+void remove_white_bg(Mat img,int backgroundThreshold);
 void PlotHistSeries(const vector<histSerie> &histSeries, Mat &plotResult,
     Scalar bgColor = Scalar(0, 0, 0));
 void onTrackBar(int, void*);
@@ -34,14 +35,18 @@ void onTrackBar(int, void*);
 int main(int argc, char* argv[])
 {
     Mat src,hsvImage;
-    src = imread("../data/assignment2B.JPG");
+    src = imread("../data/orange.JPG"); //assignment2C.JPG");
     if (!src.data) return -1;
-    cvtColor(src, hsvImage, CV_BGR2HSV);
+	remove_white_bg(src,200);
+	cvtColor(src, hsvImage, CV_BGR2HSV);
 	
 	split(hsvImage,splitHsv);
-
-
+	Scalar mu,var;
+	
+	imshow("src image",src);
 	imshow("Src image", splitHsv[0]);
+	meanStdDev(splitHsv[0],mu,var);
+	cout<<"mean intensity:"<<mu<<"standard deviation: "<<var;
     namedWindow(winName);
     createTrackbar("n.bins 2^", winName, &numBins, 8, onTrackBar);
     createTrackbar("Smooth Size", winName, &smoothSize, 35, onTrackBar);
@@ -62,7 +67,7 @@ void onTrackBar(int, void*)
     float range[] = { 0, 256 };
     const float* histRange = { range };
     int histSize = numBins*numBins;
-    calcHist(&(splitHsv[0]), 1, 0, Mat(), hist, 1, &histSize, &histRange, true, false);
+    calcHist(&(splitHsv[1]), 1, 0, Mat(), hist, 1, &histSize, &histRange, true, false);
     histSeries.push_back(histSerie("Histogram bins=" + histSize, 
             hist, CL_RED, false, 2));
 
@@ -132,4 +137,35 @@ void PlotHistSeries(const vector<histSerie> &histSeries, Mat &plotResult, Scalar
         cv::putText(plotResult, histSeries[s].Title, pt1,
             CV_FONT_HERSHEY_PLAIN, 1, histSeries[s].lineColor);
     }
+}
+void remove_white_bg(Mat img,int backgroundThreshold){
+/*
+	This function removes pixels with values on or close to the Achromatic axis 
+	===========================================================================
+	Input
+	------------------------
+	img: image (BGR image )
+	backgroundThreshold: int (threshold for measure of whiteness)
+*/
+
+	int row, col;
+	for (row=0; row < img.rows; row++) {
+			   for (col=0; col < img.cols; col++) {
+
+			    /*assign colors on the achromatic axis(near) zero value(removing gray and white pixels)*/
+	            if (((img.at<Vec3b>(row,col)[0] >= backgroundThreshold) &&
+	                (img.at<Vec3b>(row,col)[1]  >= backgroundThreshold) &&
+	                (img.at<Vec3b>(row,col)[2]  >= backgroundThreshold))//all b,g and r > threshold
+					|//or on the achromatic axis
+					((img.at<Vec3b>(row,col)[0]==img.at<Vec3b>(row,col)[1])&&
+					 (img.at<Vec3b>(row,col)[1]==img.at<Vec3b>(row,col)[2]))) {//if white
+                   //assign 0 to background pixels
+	               img.at<Vec3b>(row,col)[0] =0; 
+	               img.at<Vec3b>(row,col)[1] =0; 
+	               img.at<Vec3b>(row,col)[2] =0; 
+	            }
+
+	         }
+	      }
+
 }

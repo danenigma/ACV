@@ -2,3 +2,12 @@
 ../data/assignment2B.jpg
 ../data/assignment2C.jpg
 ../data/assignment2D.jpg
+../data/redDefective.jpg
+../data/red.jpg
+../data/blue.jpg
+../data/green.jpg
+../data/yellow.jpg
+../data/pink.jpg
+../data/purple.jpg
+../data/orange.jpg
+../data/brown.jpg

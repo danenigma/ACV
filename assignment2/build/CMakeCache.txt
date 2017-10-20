@@ -179,6 +179,12 @@ dmarew_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment2/build/sr
 dmarew_SOURCE_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment2/src/dmarew
 
 //Value Computed by CMake
+histogram_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment2/build/src/histogram
+
+//Value Computed by CMake
+histogram_SOURCE_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment2/src/histogram
+
+//Value Computed by CMake
 test_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment2/build/src/test
 
 //Value Computed by CMake
@@ -263,7 +269,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 //ADVANCED property for variable: CMAKE_RC_COMPILER
 CMAKE_RC_COMPILER-ADVANCED:INTERNAL=1
 CMAKE_RC_COMPILER_WORKS:INTERNAL=1

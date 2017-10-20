@@ -1,14 +1,17 @@
-﻿Build started 10/17/2017 9:31:47 AM.
-     1>Project "C:\ACV\assignments\ACV-assignments\assignment2\build\src\test\test.vcxproj" on node 2 (build target(s)).
-     1>InitializeBuildStatus:
+﻿Build started 10/20/2017 4:16:45 PM.
+     1>Project "C:\ACV\assignments\ACV-assignments\assignment2\build\src\test\test.vcxproj" on node 4 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "test.dir\Release\test.lastbuildstate".
+       InitializeBuildStatus:
          Creating "test.dir\Release\test.unsuccessfulbuild" because "AlwaysCreate" was specified.
        CustomBuild:
-         All outputs are up-to-date.
+         Building Custom Rule C:/ACV/assignments/ACV-assignments/assignment2/src/test/CMakeLists.txt
+         CMake does not need to re-run because C:\ACV\assignments\ACV-assignments\assignment2\build\src\test\CMakeFiles\generate.stamp is up-to-date.
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\opencv\build\include /IC:\opencv\build\include\opencv /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_DEPRECATE /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"test.dir\Release\\" /Fd"test.dir\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\test\colourSegmentationImplementation.cpp
          colourSegmentationImplementation.cpp
-     1>..\..\..\src\test\colourSegmentationImplementation.cpp(84): warning C4018: '<' : signed/unsigned mismatch
-     1>..\..\..\src\test\colourSegmentationImplementation.cpp(97): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\src\test\colourSegmentationImplementation.cpp(89): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\src\test\colourSegmentationImplementation.cpp(102): warning C4018: '<' : signed/unsigned mismatch
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\ACV\assignments\ACV-assignments\assignment2\build\Release\test.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib C:\opencv\build\x86\vc10\lib\opencv_videostab2410.lib C:\opencv\build\x86\vc10\lib\opencv_ts2410.lib C:\opencv\build\x86\vc10\lib\opencv_superres2410.lib C:\opencv\build\x86\vc10\lib\opencv_stitching2410.lib C:\opencv\build\x86\vc10\lib\opencv_contrib2410.lib C:\opencv\build\x86\vc10\lib\opencv_nonfree2410.lib C:\opencv\build\x86\vc10\lib\opencv_ocl2410.lib C:\opencv\build\x86\vc10\lib\opencv_gpu2410.lib C:\opencv\build\x86\vc10\lib\opencv_photo2410.lib C:\opencv\build\x86\vc10\lib\opencv_objdetect2410.lib C:\opencv\build\x86\vc10\lib\opencv_legacy2410.lib C:\opencv\build\x86\vc10\lib\opencv_video2410.lib C:\opencv\build\x86\vc10\lib\opencv_ml2410.lib C:\opencv\build\x86\vc10\lib\opencv_calib3d2410.lib C:\opencv\build\x86\vc10\lib\opencv_features2d2410.lib C:\opencv\build\x86\vc10\lib\opencv_highgui2410.lib C:\opencv\build\x86\vc10\lib\opencv_imgproc2410.lib C:\opencv\build\x86\vc10\lib\opencv_flann2410.lib C:\opencv\build\x86\vc10\lib\opencv_core2410.lib /NODEFAULTLIB:"libc;libcmt.lib;libcmtd.lib" /MANIFEST /ManifestFile:"test.dir\Release\test.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:/ACV/assignments/ACV-assignments/assignment2/build/Release/test.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment2/build/Release/test.lib" /MACHINE:X86 test.dir\Release\colourSegmentationImplementation.obj  /machine:X86 
          test.vcxproj -> C:\ACV\assignments\ACV-assignments\assignment2\build\Release\test.exe
@@ -17,8 +20,8 @@
        FinalizeBuildStatus:
          Deleting file "test.dir\Release\test.unsuccessfulbuild".
          Touching "test.dir\Release\test.lastbuildstate".
-     1>Done Building Project "C:\ACV\assignments\ACV-assignments\assignment2\build\src\test\test.vcxproj" (build target(s)).
+     1>Done Building Project "C:\ACV\assignments\ACV-assignments\assignment2\build\src\test\test.vcxproj" (rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.18
+Time Elapsed 00:00:01.97

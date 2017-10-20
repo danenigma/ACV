@@ -1,0 +1,19 @@
+﻿Build started 10/20/2017 2:51:38 PM.
+     1>Project "C:\ACV\assignments\ACV-assignments\assignment2\build\src\histogram\histogram.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "histogram.dir\Debug\histogram.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         All outputs are up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\opencv\build\include /IC:\opencv\build\include\opencv /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"histogram.dir\Debug\\" /Fd"histogram.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\histogram\histogramImplementation.cpp
+         histogramImplementation.cpp
+     1>..\..\..\src\histogram\histogramImplementation.cpp(431): error C2065: 'colorType' : undeclared identifier
+     1>..\..\..\src\histogram\histogramImplementation.cpp(431): error C2955: 'std::vector' : use of class template requires template argument list
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\vector(480) : see declaration of 'std::vector'
+     1>..\..\..\src\histogram\histogramImplementation.cpp(431): error C2514: 'std::_Vector_const_iterator<std::_Vector_val<_Ty,_Alloc>>' : class has no constructors
+     1>..\..\..\src\histogram\histogramImplementation.cpp(431): fatal error C1903: unable to recover from previous error(s); stopping compilation
+     1>Done Building Project "C:\ACV\assignments\ACV-assignments\assignment2\build\src\histogram\histogram.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.82

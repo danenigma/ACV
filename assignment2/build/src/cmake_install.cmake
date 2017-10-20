@@ -31,6 +31,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("C:/ACV/assignments/ACV-assignments/assignment2/build/src/dmarew/cmake_install.cmake")
   include("C:/ACV/assignments/ACV-assignments/assignment2/build/src/test/cmake_install.cmake")
+  include("C:/ACV/assignments/ACV-assignments/assignment2/build/src/histogram/cmake_install.cmake")
 
 endif()
 

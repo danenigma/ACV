@@ -1,0 +1,19 @@
+﻿Build started 10/20/2017 1:13:20 PM.
+     1>Project "C:\ACV\assignments\ACV-assignments\assignment2\build\ZERO_CHECK.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Win32\Debug\ZERO_CHECK\ZERO_CHECK.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         Checking Build System
+         CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment2/build/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment2/build/src/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment2/build/src/dmarew/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment2/build/src/test/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/ACV/assignments/ACV-assignments/assignment2/build/src/histogram/CMakeFiles/generate.stamp is up-to-date.
+       FinalizeBuildStatus:
+         Deleting file "Win32\Debug\ZERO_CHECK\ZERO_CHECK.unsuccessfulbuild".
+         Touching "Win32\Debug\ZERO_CHECK\ZERO_CHECK.lastbuildstate".
+     1>Done Building Project "C:\ACV\assignments\ACV-assignments\assignment2\build\ZERO_CHECK.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.09

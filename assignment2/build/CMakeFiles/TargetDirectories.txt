@@ -8,3 +8,6 @@ C:/ACV/assignments/ACV-assignments/assignment2/build/src/dmarew/CMakeFiles/ALL_B
 C:/ACV/assignments/ACV-assignments/assignment2/build/src/test/CMakeFiles/test.dir
 C:/ACV/assignments/ACV-assignments/assignment2/build/src/test/CMakeFiles/INSTALL.dir
 C:/ACV/assignments/ACV-assignments/assignment2/build/src/test/CMakeFiles/ALL_BUILD.dir
+C:/ACV/assignments/ACV-assignments/assignment2/build/src/histogram/CMakeFiles/histogram.dir
+C:/ACV/assignments/ACV-assignments/assignment2/build/src/histogram/CMakeFiles/INSTALL.dir
+C:/ACV/assignments/ACV-assignments/assignment2/build/src/histogram/CMakeFiles/ALL_BUILD.dir
