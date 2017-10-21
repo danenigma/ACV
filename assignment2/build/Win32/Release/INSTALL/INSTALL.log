@@ -1,6 +1,8 @@
-﻿Build started 10/20/2017 4:39:42 PM.
-     1>Project "C:\ACV\assignments\ACV-assignments\assignment2\build\INSTALL.vcxproj" on node 2 (build target(s)).
-     1>InitializeBuildStatus:
+﻿Build started 10/20/2017 6:08:03 PM.
+     1>Project "C:\ACV\assignments\ACV-assignments\assignment2\build\INSTALL.vcxproj" on node 4 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Win32\Release\INSTALL\INSTALL.lastbuildstate".
+       InitializeBuildStatus:
          Creating "Win32\Release\INSTALL\INSTALL.unsuccessfulbuild" because "AlwaysCreate" was specified.
        PostBuildEvent:
          setlocal
@@ -14,14 +16,15 @@
          if %errorlevel% neq 0 goto :VCEnd
          :VCEnd
          -- Install configuration: "Release"
-         -- Up-to-date: C:/ACV/assignments/ACV-assignments/assignment2/bin/dmarew.exe
-         -- Up-to-date: C:/ACV/assignments/ACV-assignments/assignment2/bin/test.exe
+         -- Installing: C:/ACV/assignments/ACV-assignments/assignment2/bin/dmarew.exe
+         -- Installing: C:/ACV/assignments/ACV-assignments/assignment2/bin/firstAttempt.exe
          -- Installing: C:/ACV/assignments/ACV-assignments/assignment2/bin/histogram.exe
+         -- Installing: C:/ACV/assignments/ACV-assignments/assignment2/bin/test.exe
        FinalizeBuildStatus:
          Deleting file "Win32\Release\INSTALL\INSTALL.unsuccessfulbuild".
          Touching "Win32\Release\INSTALL\INSTALL.lastbuildstate".
-     1>Done Building Project "C:\ACV\assignments\ACV-assignments\assignment2\build\INSTALL.vcxproj" (build target(s)).
+     1>Done Building Project "C:\ACV\assignments\ACV-assignments\assignment2\build\INSTALL.vcxproj" (rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.14
+Time Elapsed 00:00:00.19

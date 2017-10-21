@@ -1,3 +1,4 @@
 C:/ACV/assignments/ACV-assignments/assignment2/bin/dmarew.exe
-C:/ACV/assignments/ACV-assignments/assignment2/bin/test.exe
+C:/ACV/assignments/ACV-assignments/assignment2/bin/firstAttempt.exe
 C:/ACV/assignments/ACV-assignments/assignment2/bin/histogram.exe
+C:/ACV/assignments/ACV-assignments/assignment2/bin/test.exe

@@ -164,6 +164,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment2/build/src/dmarew/dmarew.vcxproj">
       <Project>9FE67167-E2DD-3882-A00B-05FC1268344C</Project>
     </ProjectReference>
+    <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment2/build/src/firstAttempt/firstAttempt.vcxproj">
+      <Project>4D211175-3560-354E-9257-9E37F78D69D6</Project>
+    </ProjectReference>
     <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment2/build/src/histogram/histogram.vcxproj">
       <Project>AA7CAC89-5B4D-3C29-9774-9A6AECC8EBC1</Project>
     </ProjectReference>
