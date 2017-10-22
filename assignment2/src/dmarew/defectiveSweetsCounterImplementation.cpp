@@ -126,7 +126,7 @@ int find_minimum_distance_match(vector<colorTypes> inputImageColorTypes,vector<c
 	int distance;
 	for (int color_number=0; (color_number<(int)inputImageColorTypes.size());color_number++) {
 
-		cout<<"centers: "<<inputImageColorTypes[color_number].center<<endl;
+		//cout<<"centers: "<<inputImageColorTypes[color_number].center<<endl;
 		distance  = abs(inputImageColorTypes[color_number].center-currentContourColorType[0].center);
 		if(distance<minim_distance){
 			min_index = color_number;
