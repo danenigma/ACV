@@ -57,3 +57,5 @@ bool is_defective(vector<Vec4i> defect,int defectDepthThreshold);
 vector<colorTypes> computeHueHistogramMaxima(Mat inputImage);
 int find_minimum_distance_match(vector<colorTypes> inputImageColorTypes,vector<colorTypes> currentContourColorType);
 vector<colorTypes>  combine_red_smarties(vector <colorTypes> finalColorTypes);
+void generateSatHistogram(Mat inputImage);
+void chop_histogram(Mat mHistogram);

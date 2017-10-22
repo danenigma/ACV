@@ -111,12 +111,26 @@ public:
 		mixChannels( &hsv_image, 1, &hue_image, 1, channels, 1 );
 		const float* channel_ranges = mChannelRange;
 		calcHist( &hue_image,1,0,mask_image,mHistogram,1,mNumberBins,&channel_ranges);
-		int numberOfTimesToBlur = 3;
+		
+		Size gaussianKernelSize(7,7);
+		GaussianBlur(mHistogram, mHistogram,gaussianKernelSize,0,0);
+		Mat maskImage;
+		double min,max;
+		minMaxLoc(mHistogram,&min,&max);
+		double minHistogramFactor = 0.05; //5% of the maximum
+		inRange(mHistogram, Scalar(max*minHistogramFactor), Scalar(max),maskImage);
+		maskImage.convertTo(maskImage,CV_32FC1);
+		normalize(maskImage,maskImage,0,1,CV_MINMAX);
+		multiply(mHistogram,maskImage,mHistogram);
+		
+		//cout<<mHistogram<<endl;
+
+		/*int numberOfTimesToBlur = 3;
 		Size gaussianKernelSize(5,5);
 	    for(int i=0;i<numberOfTimesToBlur;i++)
 			GaussianBlur(mHistogram, mHistogram,gaussianKernelSize,0,0);
 		
-
+		*/
 		
 	}
 	void NormaliseHistogram()
@@ -149,7 +163,7 @@ public:
 	}
 };
 vector<colorTypes> computeHueHistogramMaxima(Mat inputImage){
-	bool debug  = false;
+	bool debug  = true;
 	Mat display_image;
 	HueHistogram hh(inputImage,255,30,5,255);
 	hh.NormaliseHistogram();

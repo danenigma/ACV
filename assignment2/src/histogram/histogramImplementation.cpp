@@ -207,13 +207,22 @@ public:
 		mixChannels( &hsv_image, 1, &hue_image, 1, channels, 1 );
 		const float* channel_ranges = mChannelRange;
 		calcHist( &hue_image,1,0,mask_image,mHistogram,1,mNumberBins,&channel_ranges);
+		//chop_histogram(mHistogram);
+		Mat maskImage,res;
+		double min,max;
+		minMaxLoc(mHistogram,&min,&max);
+		inRange(mHistogram, Scalar(max*0.25), Scalar(max),maskImage);
+		maskImage.convertTo(maskImage,CV_32FC1);
+		normalize(maskImage,maskImage,0,1,CV_MINMAX);
+		multiply(mHistogram,maskImage,mHistogram);
+		cout<<mHistogram<<endl;
 		//Size sz(7,7);
 		Size sz2(5,5);
 		//Size sz3(3,3);
 	
-		GaussianBlur(mHistogram, mHistogram,sz2,0,0);
-		GaussianBlur(mHistogram, mHistogram,sz2,0,0);
-		GaussianBlur(mHistogram, mHistogram,sz2,0,0);
+		//GaussianBlur(mHistogram, mHistogram,sz2,0,0);
+		//GaussianBlur(mHistogram, mHistogram,sz2,0,0);
+		//GaussianBlur(mHistogram, mHistogram,sz2,0,0);
 		//GaussianBlur(mHistogram, mHistogram,sz3,0,0);
 		//imshow("hist as a gray scale",mHistogram);
 
@@ -267,7 +276,7 @@ vector<colorTypes> computeHueHistogramMaxima(Mat inputImage){
 	HueHistogram hh(inputImage,255,30,5,255);
 	hh.NormaliseHistogram();
 	hh.Draw(display_image);
-	imshow("hist image",display_image);
+	imshow("Hue Histogram",display_image);
 	
 	return hh.get_color_types();
 	
@@ -371,6 +380,73 @@ void generateHistogram(char *filename) {
 	//OneDHistogram histogram(inputImage,64);
 	//histogram.Draw(histogramImage2);
 	//imshow("Histogram 2", histogramImage2);
+
+
+   do{
+      waitKey(30);                                  // Must call this to allow openCV to display the images
+   } while (!_kbhit());                             // We call it repeatedly to allow the user to move the windows
+                                                    // (if we don't the window process hangs when you try to click and drag
+
+   getchar(); // flush the buffer from the keyboard hit
+
+   destroyWindow(inputWindowName);  
+   destroyWindow(histogramWindowName); 
+}
+void generateSatHistogram(Mat inputImage) {
+  
+   char inputWindowName[MAX_STRING_LENGTH]            = "Input Image";
+   char histogramWindowName[MAX_STRING_LENGTH]        = "Saturation Histogram";
+ 
+
+   Mat histogramImage;
+
+   const int* channel_numbers = { 0 };
+   float channel_range[] = { 0.0, 255.0 };
+   const float* channel_ranges = channel_range;
+   int number_bins = 255;
+
+   namedWindow(inputWindowName,     CV_WINDOW_AUTOSIZE);  
+   namedWindow(histogramWindowName, CV_WINDOW_AUTOSIZE);
+
+
+
+   printf("Press any key to continue ...\n");        
+  
+   if (inputImage.type() == CV_8UC1) {     // greyscale image
+      MatND grey_histogram;
+
+      calcHist( &inputImage, 1, channel_numbers, Mat(), grey_histogram, 1, &number_bins, &channel_ranges);
+	   OneDHistogram::Draw1DHistogram( &grey_histogram, 1, histogramImage );
+   }
+   else if (inputImage.type() == CV_8UC3) { // colour image
+      MatND* colour_histogram = new MatND[ inputImage.channels() ];  
+	   Mat hsvImage,mask_image;
+	   cvtColor(inputImage,hsvImage,CV_BGR2HSV);
+	   inRange( hsvImage, Scalar( 0,5,0), Scalar( 180, 256,255 ), mask_image );
+	   
+	   vector<Mat> colour_channels( hsvImage.channels() );
+	   split(hsvImage, colour_channels );
+
+
+	   MatND grey_histogram;
+
+	   calcHist( &colour_channels[1], 1, channel_numbers, mask_image, grey_histogram, 1, &number_bins, &channel_ranges);
+	   //OneDHistogram::SmoothHistogram();
+	   OneDHistogram::Draw1DHistogram( &grey_histogram, 1, histogramImage );
+
+
+	 
+      //for (int chan=0; chan < hsvImage.channels(); chan++) {
+        // calcHist( &(colour_channels[chan]), 1, channel_numbers, Mat(), colour_histogram[chan], 1, &number_bins, &channel_ranges);
+      //}
+
+	 //  OneDHistogram::Draw1DHistogram( colour_histogram, hsvImage.channels(), histogramImage );
+   } 
+   	
+   
+   imshow(inputWindowName, inputImage );
+   imshow(histogramWindowName, histogramImage); 
+
 
 
    do{
@@ -668,4 +744,21 @@ vector<colorTypes> combine_red_smarties(vector <colorTypes> finalColorTypes){
 	}
 	
 return finalColorTypeNoRedRedundance;
+}
+void chop_histogram(Mat mHistogram){
+Mat maskImage,res;
+double min,max;
+minMaxLoc(mHistogram,&min,&max);
+inRange(mHistogram, Scalar(max*0.25), Scalar(max),mHistogram);
+
+/*maskImage.convertTo(maskImage,CV_32FC1);
+cout<<"max value : "<<max<<endl;
+cout<<"masked hist : "<<mHistogram<<endl;
+cout<<"hist channel number: "<<mHistogram.channels()<<"type: "<<mHistogram.type()<<endl;
+cout<<"mask image channel number: "<<maskImage.channels()<<"type: "<<maskImage.type()<<endl;
+
+bitwise_and(mHistogram,maskImage,res);
+cout<<"res : "<<res<<endl;
+*/
+
 }

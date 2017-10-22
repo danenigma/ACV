@@ -31,7 +31,7 @@ int main() {
    fprintf(fp_out,"dmarew\n");
 
 
-   printf("Example of how to use openCV to generate a histogram of an image.\n\n");
+   printf("counting the number of colors and the number of defective smarties\n\n");
    
    do {
 
@@ -39,7 +39,7 @@ int main() {
       
       if (end_of_file != EOF) {
          //if (debug) printf ("%s\n",filename);
-         printf("\nGenerating histogram of image in %s \n",filename);
+         //printf("\nGenerating histogram of image in %s \n",filename);
 		 inputImage = imread(filename, CV_LOAD_IMAGE_UNCHANGED);
          if(inputImage.empty()) {
             cout << "can not open here" << filename << endl;
@@ -55,7 +55,15 @@ int main() {
 			 ss<<((int)defectivePerColor[color_number].defective_count)<<" ";
 		 ss<<"defects per colour";
 		 fprintf(fp_out,"%s\n",ss.str());
-		 //generateHueHistogram(filename);
+		 cout<<ss.str()<<endl;
+		 do{
+			waitKey(30);                                  // Must call this to allow openCV to display the images
+			} while (!_kbhit());                             // We call it repeatedly to allow the user to move the windows
+                                                    // (if we don't the window process hangs when you try to click and drag
+
+		 getchar(); // flush the buffer from the keyboard hit
+
+		 destroyAllWindows();  
       }
    } while (end_of_file != EOF);
 

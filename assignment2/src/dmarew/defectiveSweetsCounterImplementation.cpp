@@ -1,6 +1,6 @@
 #include "defectiveSweetsCounter.h"
 void count_defective_sweets(Mat inputImage,int &total_defective_count,int &totalNumberOfColors,vector<colorTypes> &defectivePerColor){
-
+   bool debug =false;
    int structuringElementSize = 5; 
    int defectiveSmartiesCount;
    int backgroundThreshold = 200;
@@ -43,37 +43,27 @@ void count_defective_sweets(Mat inputImage,int &total_defective_count,int &total
 	//closing to fill holes
 	flood_fill(filteredImage);
 	morphologyEx(filteredImage,filteredImage,  MORPH_ERODE,openElement,Point(structuringElementSize/2,structuringElementSize/2),1);
-	vector<colorTypes> sweetBBs = get_individual_sweets(filteredImage.clone(),inputImage.clone(),defectiveSmartiesCount);
-	vector<colorTypes> finalColorTypesNoRedRedundance = combine_red_smarties(sweetBBs);
-
+	vector<colorTypes> distinctColorsIncludingDefect = get_distinct_colors_including_defect(filteredImage.clone(),inputImage.clone(),defectiveSmartiesCount);
+	vector<colorTypes> finalColorTypesNoRedRedundance = combine_red_smarties(distinctColorsIncludingDefect);
+	if(debug)
 	for (vector<colorTypes>::const_iterator i = finalColorTypesNoRedRedundance.begin(); i != finalColorTypesNoRedRedundance.end(); ++i){
 
 		cout<<"color type: "<<i->center	<<" defective count: "<<i->defective_count<<endl;
 	}
-	cout<<"total defective smarties count:"<<defectiveSmartiesCount<<endl;
-	cout<<"total number of colors improved: "<<(int)finalColorTypesNoRedRedundance.size()<<endl;
+	//cout<<"total defective smarties count:"<<defectiveSmartiesCount<<endl;
+	//cout<<"total number of colors improved: "<<(int)finalColorTypesNoRedRedundance.size()<<endl;
 	//errode to remove noise especially at the edges of the sweets 
 	totalNumberOfColors = (int)finalColorTypesNoRedRedundance.size();
 	total_defective_count = defectiveSmartiesCount;
 	defectivePerColor = finalColorTypesNoRedRedundance;
 
 
-
-
-
-
+	//only for displaying the histogram 
+	computeHueHistogramMaxima(inputImage);
 
 	imshow(inputWindowName,inputImage);
 	imshow(binaryWindowName,filteredImage);
-	do{
-       waitKey(30);                                  // Must call this to allow openCV to display the images
-     } while (!_kbhit());                             // We call it repeatedly to allow the user to move the windows
-                                                    // (if we don't the window process hangs when you try to click and drag
 
-   getchar(); // flush the buffer from the keyboard hit
-
-   destroyWindow(inputWindowName);  
-   destroyWindow(binaryWindowName); 
 
 }
 void remove_white_bg(Mat img,int backgroundThreshold){
@@ -118,9 +108,11 @@ void flood_fill(Mat img){
 }
 bool is_defective(vector<Vec4i> contourDefects,int defectDepthThreshold){
 	for(int defect_index=0;defect_index<contourDefects.size();defect_index++){
-
-		if (contourDefects[defect_index][3]>defectDepthThreshold && contourDefects[defect_index][3]<2*defectDepthThreshold)
-			return true;
+		//cout<<"defective depth:"<<contourDefects[defect_index][3]<<endl;
+		if (contourDefects[defect_index][3]>defectDepthThreshold && contourDefects[defect_index][3]<4*defectDepthThreshold){
+				
+				return true;
+		}
 				
 		
 	}
@@ -134,7 +126,7 @@ int find_minimum_distance_match(vector<colorTypes> inputImageColorTypes,vector<c
 	int distance;
 	for (int color_number=0; (color_number<(int)inputImageColorTypes.size());color_number++) {
 
-		
+		cout<<"centers: "<<inputImageColorTypes[color_number].center<<endl;
 		distance  = abs(inputImageColorTypes[color_number].center-currentContourColorType[0].center);
 		if(distance<minim_distance){
 			min_index = color_number;
@@ -153,7 +145,7 @@ vector<colorTypes> combine_red_smarties(vector <colorTypes> finalColorTypes){
 	int red_index = 0;
 	
 	for (int color_number=0; (color_number<(int)finalColorTypes.size());color_number++) {
-		if(finalColorTypes[color_number].center<3||finalColorTypes[color_number].center>252){
+		if(finalColorTypes[color_number].center<5||finalColorTypes[color_number].center>250){
 			if (red_count ==0){//first red
 				
 				finalColorTypeNoRedRedundance.push_back(finalColorTypes[color_number]);
@@ -174,7 +166,7 @@ vector<colorTypes> combine_red_smarties(vector <colorTypes> finalColorTypes){
 	
 return finalColorTypeNoRedRedundance;
 }
-vector<colorTypes>  get_individual_sweets(Mat filteredImage,Mat inputImage,int& defect_count){
+vector<colorTypes> get_distinct_colors_including_defect(Mat filteredImage,Mat inputImage,int& defect_count){
 	RNG rng(12345);
 	vector<vector<Point> > contours;
 	vector<Vec4i> hierarchy;

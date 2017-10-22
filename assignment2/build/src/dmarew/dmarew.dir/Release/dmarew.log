@@ -1,4 +1,4 @@
-﻿Build started 10/20/2017 6:07:58 PM.
+﻿Build started 10/21/2017 4:55:30 PM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment2\build\src\dmarew\dmarew.vcxproj" on node 3 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "dmarew.dir\Release\dmarew.lastbuildstate".
@@ -11,8 +11,8 @@
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\opencv\build\include /IC:\opencv\build\include\opencv /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_DEPRECATE /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"dmarew.dir\Release\\" /Fd"dmarew.dir\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\dmarew\defectiveSweetsCounterApplication.cpp ..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp ..\..\..\src\dmarew\histogramImplementation.cpp
          defectiveSweetsCounterApplication.cpp
          defectiveSweetsCounterImplementation.cpp
-     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(120): warning C4018: '<' : signed/unsigned mismatch
-     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(252): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(110): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(244): warning C4018: '<' : signed/unsigned mismatch
          histogramImplementation.cpp
          Generating Code...
        Link:
@@ -29,4 +29,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.38
+Time Elapsed 00:00:04.93

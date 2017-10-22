@@ -45,7 +45,9 @@ int main() {
             prompt_and_exit(-1);
          }
 
-		 count_defective_sweets(inputImage);
+		 //count_defective_sweets(inputImage);
+		 computeHueHistogramMaxima(inputImage.clone());
+		 generateSatHistogram(inputImage.clone());
          //generateHueHistogram(filename);
       }
    } while (end_of_file != EOF);
