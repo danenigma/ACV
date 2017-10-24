@@ -38,8 +38,7 @@ int main() {
       end_of_file = fscanf(fp_in, "%s", filename);
       
       if (end_of_file != EOF) {
-         //if (debug) printf ("%s\n",filename);
-         //printf("\nGenerating histogram of image in %s \n",filename);
+
 		 inputImage = imread(filename, CV_LOAD_IMAGE_UNCHANGED);
          if(inputImage.empty()) {
             cout << "can not open here" << filename << endl;

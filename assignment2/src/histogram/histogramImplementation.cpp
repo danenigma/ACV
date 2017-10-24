@@ -207,7 +207,8 @@ public:
 		mixChannels( &hsv_image, 1, &hue_image, 1, channels, 1 );
 		const float* channel_ranges = mChannelRange;
 		calcHist( &hue_image,1,0,mask_image,mHistogram,1,mNumberBins,&channel_ranges);
-		//chop_histogram(mHistogram);
+		
+		cout<<mHistogram<<endl;
 		Mat maskImage,res;
 		double min,max;
 		minMaxLoc(mHistogram,&min,&max);
@@ -215,7 +216,7 @@ public:
 		maskImage.convertTo(maskImage,CV_32FC1);
 		normalize(maskImage,maskImage,0,1,CV_MINMAX);
 		multiply(mHistogram,maskImage,mHistogram);
-		cout<<mHistogram<<endl;
+		
 		//Size sz(7,7);
 		Size sz2(5,5);
 		//Size sz3(3,3);

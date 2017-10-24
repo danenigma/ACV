@@ -46,4 +46,4 @@ void prompt_and_exit(int status);
 void prompt_and_continue();
 
 
-vector<colorTypes> computeHueHistogramMaxima(Mat inputImage);
+vector<colorTypes> computeHueHistogramMaxima(Mat inputImage,int min_histogram_threshold=80);

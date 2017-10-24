@@ -1,22 +1,15 @@
 dmarew
-../data/redsDominate.jpg 6 defective sweets, 1 colours, 6 defects per colour
 ../data/assignment2A.jpg 0 defective sweets, 3 colours, 0 0 0 defects per colour
 ../data/assignment2B.jpg 4 defective sweets, 3 colours, 2 1 1 defects per colour
 ../data/assignment2C.jpg 0 defective sweets, 8 colours, 0 0 0 0 0 0 0 0 defects per colour
 ../data/assignment2D.jpg 1 defective sweets, 8 colours, 1 0 0 0 0 0 0 0 defects per colour
 ../data/white.png 0 defective sweets, 0 colours, defects per colour
-../data/allRedsWithMultipleDefectives.jpg 3 defective sweets, 1 colours, 3 defects per colour
-../data/allDefective.jpg 19 defective sweets, 8 colours, 3 2 3 2 4 1 2 2 defects per colour
-../data/eightRedAndOneGreen.jpg 4 defective sweets, 2 colours, 3 1 defects per colour
-../data/allDefectiveExceptOneGreen.jpg 18 defective sweets, 8 colours, 3 2 3 2 3 1 2 2 defects per colour
-../data/brownAndOrange.jpg 0 defective sweets, 2 colours, 0 0 defects per colour
-../data/brownAndOrangeDefective.jpg 2 defective sweets, 2 colours, 1 1 defects per colour
-../data/Smarties4.jpg 0 defective sweets, 6 colours, 0 0 0 0 0 0 defects per colour
-../data/redDefective.jpg 1 defective sweets, 1 colours, 1 defects per colour
 ../data/red.jpg 0 defective sweets, 1 colours, 0 defects per colour
-../data/blue.jpg 0 defective sweets, 1 colours, 0 defects per colour
-../data/green.jpg 0 defective sweets, 1 colours, 0 defects per colour
-../data/yellow.jpg 0 defective sweets, 1 colours, 0 defects per colour
-../data/pink.jpg 0 defective sweets, 1 colours, 0 defects per colour
-../data/purple.jpg 0 defective sweets, 1 colours, 0 defects per colour
-../data/orange.jpg 0 defective sweets, 1 colours, 0 defects per colour
+../data/redDefective.jpg 1 defective sweets, 1 colours, 1 defects per colour
+../data/brownAndOrangeDefective.jpg 2 defective sweets, 2 colours, 1 1 defects per colour
+../data/allRedsWithMultipleDefectives.jpg 3 defective sweets, 1 colours, 3 defects per colour
+../data/allDefectiveExceptTwo.jpg 18 defective sweets, 8 colours, 3 2 3 2 3 1 2 2 defects per colour
+../data/allDefectiveExceptOne.jpg 19 defective sweets, 8 colours, 3 2 3 2 4 1 2 2 defects per colour
+../data/eightRedAndOneGreen.jpg 4 defective sweets, 2 colours, 3 1 defects per colour
+../data/redsDominate.jpg 6 defective sweets, 2 colours, 5 1 defects per colour
+../data/assignment1B.jpg 6 defective sweets, 8 colours, 1 1 2 2 0 0 0 0 defects per colour

@@ -4,21 +4,23 @@ void count_defective_sweets(Mat inputImage,int &total_defective_count,int &total
    int structuringElementSize = 5; 
    int defectiveSmartiesCount;
    int backgroundThreshold = 200;
+   int gaussianKernelSize = 21;
+   int gaussianStd = 1;
    
-   char inputWindowName[MAX_STRING_LENGTH]            = "Input Image";
-   char histogramWindowName[MAX_STRING_LENGTH]        = "Histogram";
+   char inputWindowName[MAX_STRING_LENGTH]         = "Input Image";
+   char histogramWindowName[MAX_STRING_LENGTH]     = "Histogram";
    char binaryWindowName[MAX_STRING_LENGTH]        = "binary Image";
    
    namedWindow(inputWindowName,     CV_WINDOW_AUTOSIZE);  
    namedWindow(binaryWindowName,     CV_WINDOW_AUTOSIZE);  
 
-   //namedWindow(histogramWindowName, CV_WINDOW_AUTOSIZE);
+
    Mat blurImage,grayscaleImage,filteredImage;
    /* convert from colour to greyscale if necessary */
    //check number of channels
    if (inputImage.type() == CV_8UC3) { // colour image
 	   //blur image to remove noise
-	   GaussianBlur(inputImage,blurImage,Size(21,21),1);	 
+	   GaussianBlur(inputImage,blurImage,Size(gaussianKernelSize,gaussianKernelSize),gaussianStd);	 
 	   //remove white and shadow
 	   remove_white_bg(blurImage,backgroundThreshold);
 	   //convert to grayscale image
@@ -26,41 +28,49 @@ void count_defective_sweets(Mat inputImage,int &total_defective_count,int &total
 	   
     } 
    else {
-	   //else use as is
-        grayscaleImage = inputImage.clone();
+	   //only works for color images
+       return;
     }
     
    /*Structuring elements*/
-	Mat openElement  = getStructuringElement(MORPH_ELLIPSE,Size(structuringElementSize ,structuringElementSize ));
+	Mat errodElement  = getStructuringElement(MORPH_ELLIPSE,Size(structuringElementSize ,structuringElementSize ));
 	
 	
 	
-	/*====================================================================*/
-	/*       Thresholding image and applying morphological operations     */
-	/*====================================================================*/
+	/*=========================================================================================*/
+	/*                 Thresholding image and applying morphological operations                */
+	/*=========================================================================================*/
 	//threshold the image
 	threshold(grayscaleImage,filteredImage,1,255,CV_THRESH_BINARY);
-	//closing to fill holes
+	//flood filling to fill holes
 	flood_fill(filteredImage);
-	morphologyEx(filteredImage,filteredImage,  MORPH_ERODE,openElement,Point(structuringElementSize/2,structuringElementSize/2),1);
-	vector<colorTypes> distinctColorsIncludingDefect = get_distinct_colors_including_defect(filteredImage.clone(),inputImage.clone(),defectiveSmartiesCount);
+	// errosion to remove small noise 
+	morphologyEx(filteredImage,filteredImage,  MORPH_ERODE,errodElement,Point(structuringElementSize/2,structuringElementSize/2),1);
+	/*========================================================================================*/
+	/* get distinct colors including their corrosponding defective count with red redundance  */
+	/*========================================================================================*/	
+	
+	vector<colorTypes> distinctColorsIncludingDefect  = get_distinct_colors_including_defect(filteredImage.clone(),inputImage.clone(),defectiveSmartiesCount);
+	/*========================================================================================*/
+	/*                                 remove red redundance                                  */
+	/*========================================================================================*/	
 	vector<colorTypes> finalColorTypesNoRedRedundance = combine_red_smarties(distinctColorsIncludingDefect);
+	/*
 	if(debug)
 	for (vector<colorTypes>::const_iterator i = finalColorTypesNoRedRedundance.begin(); i != finalColorTypesNoRedRedundance.end(); ++i){
 
 		cout<<"color type: "<<i->center	<<" defective count: "<<i->defective_count<<endl;
 	}
-	//cout<<"total defective smarties count:"<<defectiveSmartiesCount<<endl;
-	//cout<<"total number of colors improved: "<<(int)finalColorTypesNoRedRedundance.size()<<endl;
-	//errode to remove noise especially at the edges of the sweets 
+	*/
+	//returning the total number of colors and there corrosponding defective count to be displayed in the application file
 	totalNumberOfColors = (int)finalColorTypesNoRedRedundance.size();
 	total_defective_count = defectiveSmartiesCount;
 	defectivePerColor = finalColorTypesNoRedRedundance;
 
 
-	//only for displaying the histogram 
-	computeHueHistogramMaxima(inputImage);
-
+	//only for displaying the histograms 
+	computeHueHistogramMaxima(inputImage,80);
+	//display input image
 	imshow(inputWindowName,inputImage);
 	imshow(binaryWindowName,filteredImage);
 
@@ -97,73 +107,83 @@ void remove_white_bg(Mat img,int backgroundThreshold){
 	      }
 
 }
-void flood_fill(Mat img){
-   Mat im_floodfill = img.clone();
-   floodFill(im_floodfill, cv::Point(0,0), Scalar(255));
-    // Invert floodfilled image
-   Mat im_floodfill_inv;
-   bitwise_not(im_floodfill, im_floodfill_inv);  
-    // Combine the two images to get the foreground.
-   img = (img | im_floodfill_inv);
+void flood_fill(Mat filteredImage){
+	//store copy of original image
+   Mat floodFillInvertedImage,floodFillImage;
+   floodFillImage = filteredImage.clone();
+   // floodfill the filtered image starting from the top left corner(white)
+   // the only black pixels in the output image would be the holes inside the sweets
+   floodFill(floodFillImage, cv::Point(0,0), Scalar(255));
+   // Invert floodFilled image so that the holes would be white
+   bitwise_not(floodFillImage,floodFillInvertedImage);  
+   // if it is in either the in the inverted flood filled image(hole) or the original image = forground(255 white)
+   filteredImage = (filteredImage | floodFillInvertedImage);
 }
 bool is_defective(vector<Vec4i> contourDefects,int defectDepthThreshold){
+	//for each defect in the current contour
 	for(int defect_index=0;defect_index<contourDefects.size();defect_index++){
-		//cout<<"defective depth:"<<contourDefects[defect_index][3]<<endl;
-		if (contourDefects[defect_index][3]>defectDepthThreshold && contourDefects[defect_index][3]<4*defectDepthThreshold){
+		//when the defect depth of the current contour is greater than the threshold stop iterating say it is defective
+		if (contourDefects[defect_index][3]>defectDepthThreshold /*&& contourDefects[defect_index][3]<10*defectDepthThreshold*/){
 				
 				return true;
 		}
-				
-		
+					
 	}
-
+	//not defective otherwise
 	return false;
 }
 int find_minimum_distance_match(vector<colorTypes> inputImageColorTypes,vector<colorTypes> currentContourColorType){
-	
+	//given the local maxima for the inputImage(color template) find the color template in the input histogram
+	//that is the closest to the current color type local maximum
 	int min_index = 0;
-	int minim_distance = 1000;
+	int minim_distance = 1000;//some large number actually min dist <255
 	int distance;
+	//loop through all the color types
 	for (int color_number=0; (color_number<(int)inputImageColorTypes.size());color_number++) {
 
-		//cout<<"centers: "<<inputImageColorTypes[color_number].center<<endl;
+		//compute L1 distance between the two centers
 		distance  = abs(inputImageColorTypes[color_number].center-currentContourColorType[0].center);
-		if(distance<minim_distance){
+		if(distance<minim_distance){// if less than current min distance update min distance
 			min_index = color_number;
 			minim_distance = distance;
 		}
 
 	
 	}
-		//cout<<"current contour color: "<<currentContourColorType[0].center<<endl;
+	//return the index of the color type (from input color type templates)that is the closest to
+	//the color of the current contour
 	return min_index;
 }
-vector<colorTypes> combine_red_smarties(vector <colorTypes> finalColorTypes){
+vector<colorTypes> combine_red_smarties(vector <colorTypes> finalColorTypes/*with red redundance*/){
+	//the goal of this function is to combine all the red smarties into one color type
 	vector<colorTypes> finalColorTypeNoRedRedundance;
 
 	int red_count = 0;
 	int red_index = 0;
-	
+	//loop through all the color types
 	for (int color_number=0; (color_number<(int)finalColorTypes.size());color_number++) {
+		//if it is red
 		if(finalColorTypes[color_number].center<5||finalColorTypes[color_number].center>250){
 			if (red_count ==0){//first red
-				
+				//push to final output vector
 				finalColorTypeNoRedRedundance.push_back(finalColorTypes[color_number]);
-				red_index = color_number;
-				red_count ++;
+				red_index = color_number;//remember the index of red in the color type list 
+				red_count ++;//increment red count
 			
 			}
 			else{
+				//because we remember the index of the red smarties
+				//increament defective count
 				finalColorTypeNoRedRedundance[red_index].defective_count = finalColorTypeNoRedRedundance[red_index].defective_count+
 																   finalColorTypes[color_number].defective_count ;
 				
 			}
 		}
-		else{
+		else{//if it is not read just push to the output vector
 			finalColorTypeNoRedRedundance.push_back(finalColorTypes[color_number]);
 		}
 	}
-	
+//return colorType array with no red redundance	
 return finalColorTypeNoRedRedundance;
 }
 vector<colorTypes> get_distinct_colors_including_defect(Mat filteredImage,Mat inputImage,int& defect_count){
@@ -181,21 +201,26 @@ vector<colorTypes> get_distinct_colors_including_defect(Mat filteredImage,Mat in
 	vector<Vec4i> convexity_defects(contours.size()); 
 
 	vector<colorTypes> inputImageColorTypes,currentContourColorType;
+	int histogramTheshold = 80;
+	double minHistogramFactor = 0.05;
+	if (!contours.empty())		
+		histogramTheshold = get_min_contour_size(contours)*minHistogramFactor;
 
-	inputImageColorTypes = computeHueHistogramMaxima(inputImage);
-
+	inputImageColorTypes = computeHueHistogramMaxima(inputImage,histogramTheshold);
+	//cout<<"Histogram Threshold: "<<histogramTheshold<<endl;
 	Mat currentSmartyImage;
 	int currentSmartyColorIndex;
 	int total_defective_count = 0;
+	int contour_noise_threshold = 10;
 	for (int contour_number=0; (contour_number<(int)contours.size()); contour_number++) {
-		if (contours[contour_number].size() > 10) {
+		if (contours[contour_number].size() > contour_noise_threshold) {
 
 			min_bounding_rectangle[contour_number] = boundingRect(contours[contour_number]);
 			convexHull(contours[contour_number], hulls[contour_number]);
 			convexHull(contours[contour_number], hull_indices[contour_number]);
 			convexityDefects( contours[contour_number], hull_indices[contour_number], convexity_defects);
 			currentSmartyImage = inputImage(min_bounding_rectangle[contour_number]);
-			currentContourColorType = computeHueHistogramMaxima(currentSmartyImage);
+			currentContourColorType = computeHueHistogramMaxima(currentSmartyImage,histogramTheshold);
 			currentSmartyColorIndex = find_minimum_distance_match(inputImageColorTypes,currentContourColorType);
 			//cout<<"current smarty is of color: "<<inputImageColorTypes[currentSmartyColorIndex].center<<endl;
 			if (is_defective(convexity_defects,1000)){
@@ -251,4 +276,67 @@ vector<colorTypes> get_local_maxima(Mat img,int size){
 
 	return colors;
 }
+int get_min_contour_size(vector<vector<Point> > contours){
 
+  int smallest_contour_area=contourArea( contours[0],false);
+  double current_contour_area;
+
+  for( int i = 1; i< contours.size(); i++ ) // iterate through each contour. 
+      {
+       current_contour_area = contourArea( contours[i],false);  //  Find the area of contour
+	  
+       if(current_contour_area < smallest_contour_area){
+       smallest_contour_area = current_contour_area;
+
+       }
+      }
+return smallest_contour_area;
+}
+
+void displayMultilpleImages(Mat* imageList,int numberOfImages){
+	/*
+	This function displays upto 6 images on the same window
+	=======================================================
+	Input
+	---------------------
+	imageList: list of images(Mat objects)
+	numberOfImages: the number of images in the imageList
+	
+	
+	*/
+	int space = 10;
+	//large image for putting all the images as ROIs
+	Mat DispImage = Mat::zeros(Size(3*imageList[0].cols + 2*space,imageList[0].rows), CV_8UC3);
+	double xScale = 1;
+	double yScale = 1;
+	int xStart = 0;
+	int xCounter = 0;
+	int yStart = 0;
+	for(int i=0;i<numberOfImages;i++){
+
+		Mat currentImg;
+		if (imageList[i].type()==CV_8UC1) {
+				  //input image is grayscale
+			cvtColor(imageList[i], currentImg, CV_GRAY2RGB);
+		}else{//input image is color
+
+			currentImg = imageList[i];
+		}
+
+		Mat temp;
+		if(i==3){//go to the second row
+			yStart = (int)(currentImg.rows/yScale) + space;
+			xCounter=0;
+		}
+		xStart=xCounter*(currentImg.cols/xScale + space);
+		Rect ROI(xStart,yStart,(int)(currentImg.cols/xScale),(int)(currentImg.rows/yScale));
+		resize(currentImg,temp, Size(ROI.width, ROI.height));
+		temp.copyTo(DispImage(ROI));
+		xCounter++;
+		
+		}
+	
+		resize(DispImage,DispImage,Size(1000,300));
+		imshow("Hue Histogram At Different Processing Steps",DispImage);//show processing steps
+	
+}
