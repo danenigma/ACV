@@ -1,4 +1,4 @@
-﻿Build started 10/24/2017 2:31:21 PM.
+﻿Build started 10/24/2017 2:38:08 PM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment2\build\src\histogram\histogram.vcxproj" on node 4 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "histogram.dir\Release\histogram.lastbuildstate".
@@ -27,4 +27,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.73
+Time Elapsed 00:00:03.91

@@ -111,10 +111,10 @@ Summary of Testing
 				Correct Defective count(6) , Correct Color type count(2),Correct defective count per color type (5,1)
 	-9  test:
 			30 larg overlapping sweets 8 different colors no defectives (to test the robustness of the color segmentation but
-			we expect wrong defective count because we didn't do any thing to split them up)
+			we expect wrong defective count because we didn't do anything to split them up)
 			
 		result:
-			 Wrong Defective count(as expected), Correct Color type count(8) , Wrong defective per color count
+			 Wrong Defective count(as expected), Correct Color type count(8) , Wrong defective per color count(as expected)
 			
 
 	limitation:
@@ -122,11 +122,11 @@ Summary of Testing
 	- Works only for white background images(needs modification to work with other color backgrounds)
     Assumptions:
 	- White background
-	- The smarties have relativly similar sizes. 	
+	
 		
 	
 	Main parameters that needed tuning:
-		1. defective depth treshold
+		1. defective depth treshold (1000)
 		2. backgroundness parameter (Achromatic axis) (any thing with bgr values > 200 or b=g=r) 
 		3. redness thresholds(<5 and >250)
 		4. contour noise threshold (10)

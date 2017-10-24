@@ -1,4 +1,4 @@
-﻿Build started 10/24/2017 2:31:21 PM.
+﻿Build started 10/24/2017 2:38:08 PM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment2\build\src\dmarew\dmarew.vcxproj" on node 3 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "dmarew.dir\Release\dmarew.lastbuildstate".
@@ -11,14 +11,14 @@
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\opencv\build\include /IC:\opencv\build\include\opencv /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_DEPRECATE /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"dmarew.dir\Release\\" /Fd"dmarew.dir\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\dmarew\defectiveSweetsCounterApplication.cpp ..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp ..\..\..\src\dmarew\histogramImplementation.cpp
          defectiveSweetsCounterApplication.cpp
          defectiveSweetsCounterImplementation.cpp
-     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(124): warning C4018: '<' : signed/unsigned mismatch
-     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(207): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(216): warning C4018: '>' : signed/unsigned mismatch
-     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(269): warning C4018: '<' : signed/unsigned mismatch
-     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(281): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
-     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(284): warning C4018: '<' : signed/unsigned mismatch
-     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(289): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(331): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(132): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(215): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(224): warning C4018: '>' : signed/unsigned mismatch
+     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(277): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(289): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(292): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(297): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>..\..\..\src\dmarew\defectiveSweetsCounterImplementation.cpp(339): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
          histogramImplementation.cpp
          Generating Code...
        Link:
@@ -35,4 +35,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.45
+Time Elapsed 00:00:04.51

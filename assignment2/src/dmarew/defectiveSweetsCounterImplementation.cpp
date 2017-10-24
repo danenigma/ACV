@@ -1,4 +1,12 @@
 #include "defectiveSweetsCounter.h"
+
+
+
+
+
+
+
+
 void count_defective_sweets(Mat inputImage,int &total_defective_count,int &totalNumberOfColors,vector<colorTypes> &defectivePerColor){
    bool debug =false;
    int structuringElementSize = 5; 

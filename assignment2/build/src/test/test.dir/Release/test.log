@@ -1,4 +1,4 @@
-﻿Build started 10/24/2017 2:31:22 PM.
+﻿Build started 10/24/2017 2:38:08 PM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment2\build\src\test\test.vcxproj" on node 5 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "test.dir\Release\test.lastbuildstate".
@@ -24,4 +24,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.21
+Time Elapsed 00:00:02.27

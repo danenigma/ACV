@@ -1,5 +1,5 @@
-﻿Build started 10/24/2017 2:31:26 PM.
-     1>Project "C:\ACV\assignments\ACV-assignments\assignment2\build\INSTALL.vcxproj" on node 5 (rebuild target(s)).
+﻿Build started 10/24/2017 2:38:13 PM.
+     1>Project "C:\ACV\assignments\ACV-assignments\assignment2\build\INSTALL.vcxproj" on node 4 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "Win32\Release\INSTALL\INSTALL.lastbuildstate".
        InitializeBuildStatus:
@@ -27,4 +27,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.20
+Time Elapsed 00:00:00.21
