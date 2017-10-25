@@ -1,12 +1,10 @@
 /*
 
-
-
    defectiveSweetsCounter.h - interface file for a program that counts the different sweet colors and the number of defective sweets of each 
    color type in an image
    =============================================================================================================
 
-   This program is for course 04-801 Applied Computer Vision, Assignment No. 2 
+   This program is for course 18799-RW Applied Computer Vision, Assignment No. 2 
    The goal of this assignment is to count the different sweet color types and the number of defective sweets of each 
    color type in an image
    ==========================================================================================================
@@ -29,10 +27,9 @@
 			   - call computeHueHistogramMaxima(inputImage)
 					- extract the hue of the inputImage(min saturation = 30)
 					- compute the hue histogram (bin size = 255)
-					- gaussian blur to remove noise in the hue histogram(size 7x7 1 sd)
+					- gaussian blur to remove noise in the hue histogram(size 7x7 )
 					- remove hue values with small frequencies( other wise they will be counted as local maxima later)
 						Previous Implementation(has color domination problem)
-						
 								- compute the maximum frequency in the hue histogram
 								- use that to estabilish a threshold for low frequency hue histogram(5% of the maximum was used)
 								- remove hue values lower than 5% of the maximum hue histogram value
@@ -57,50 +54,55 @@
 				typically will have to local maxima in the histogram hence will be counted as two.
 				-loop through all the local maxima(color types) of the hue histogram of the input image
 					- accumulate all the red sweets i.e increament number of defective count of red sweets whenever we find one.
-						red sweets is a sweet with hue <5 or hue >255
+						red sweet is a sweet with hue <5 or hue >255
 		Step-9 Display the Hue Histogram at different stages of processing.
 
 
 Summary of Testing
 	- First I tested the algorithm with the provided test images 
 	- After finding the right values for the different parameters I tested the algorithm on different images
-	  By varying the number of sweets (starting from 0),number of defects, combination of color types, color domination and finally size.
+	  By varying the number of sweets (starting from 0),number of defects (including the number of defects in a single sweet)
+	  , combination of color types, color domination and finally size(different type of sweets).
 
 	-1  test:
 			0 sweets white background
 		result:
-			Correct Defective count , Correct Color type count
+			Correct Defective count(0) , Correct Color type count(0)
 	-2  test:
 			1 sweet not defective red color 
 		result:
 			Correct Defective count(0) , Correct Color type count(1),Correct defective count per color type (0)
 	-3  test:
+			1 sweet defective red color 
+		result:
+			Correct Defective count(1) , Correct Color type count(1),Correct defective count per color type (1)
+	-4  test:
 			2 sweets both defective 1 brown and 1 orange colors (most difficult to separate in the Hu Histogram)
 		result:
-			Correct Defective count(1) , Correct Color type count(1),Correct defective count per color type (1,1)
+			Correct Defective count(1) , Correct Color type count(1) , Correct defective count per color type (1,1)
 			
-	-4  test:
-			8 red sweets 3 defective (to test how well the final step of the algorithm i.e(combining red sweets)works)
+	-5  test:
+			8 red sweets 3 defective (to test how well the final step of the algorithm i.e (combining red sweets)works)
 		result:
 			Correct Defective count(3) , Correct Color type count(1) , Correct defective count per color type (3)
 			
-	-5	test:
+	-6	test:
 			20 sweets with 8 different colors 18 defective
 		result:
 			Correct Defective count(18) , Correct Color type count(8), (Can't definitly tell but looks correct)(compare the number of  green sweets with the next test)
 			
-	-6  test:
+	-7  test:
 			20 sweets with 8 different colors 19 defective (what makes it different from the test above is all the greens are defective)
 		result:
 			Correct Defective count(19) , Correct Color type count(8), (Can't definitly tell but looks correct)(compare the number of greens with previous test)
 
-	-7  test:
+	-8  test:
 			8 red and 1 green sweets 3 of the reds and the green sweets are defective(to check for color domination)
 		result:
 			Correct Defective count(4) , Correct Color type count(2),Correct defective count per color type (3,1)
 		
 
-	-8  test:
+	-9  test:
 		Previous Implementation of histogram thresholding
 			16 red and 1 green sweets 5 of the reds and the green sweets are defective(to check for color domination)
 			result:
@@ -109,7 +111,7 @@ Summary of Testing
 		Current Implementation of histogram thresholding
 			result:
 				Correct Defective count(6) , Correct Color type count(2),Correct defective count per color type (5,1)
-	-9  test:
+	-10  test:
 			30 larg overlapping sweets 8 different colors no defectives (to test the robustness of the color segmentation but
 			we expect wrong defective count because we didn't do anything to split them up)
 			
@@ -118,11 +120,11 @@ Summary of Testing
 			
 
 	limitation:
-	- Can not handle overlapping
+	- Can not handle overlapping sweets
 	- Works only for white background images(needs modification to work with other color backgrounds)
     Assumptions:
 	- White background
-	
+	- the colors are distinct enough
 		
 	
 	Main parameters that needed tuning:
@@ -133,13 +135,31 @@ Summary of Testing
 		5. Minimum Histogram Thresholding Factor (5%)
 		6. Histogram bluring (Gaussian kernel size = 7x7)
 
+   File organization
+   -----------------
+
+   histogram.h                  interface file: for the computation of the hue histogram. Here we define a struct called colorType that has
+											  two fields int center (hue value of a distinct color) int defective_count (defect count for that specific color)
+											  we use colorType struct throughout
+   defectiveSweetsCounter.h     interface file: for the different functions that implement the above algorithm
+
+   histogramImplementation.cpp  implementation file: contains the definitions of the functions that compute the hue histogram 
+											         and hue histogram maxima
+
+   defectiveSweetsCounterImplementation.cpp implementation file: implementation of the different functions that implement the 
+																 above algorithm
+   defectiveSweetsCounterApplication.cpp  application file: 
+
+
+
+
 
 
    Author
    ------
 
    Daniel Marew
-   10/24/2017
+   10/25/2017
 
 
    Audit Trail
@@ -149,14 +169,19 @@ Summary of Testing
 */
 
 #include "histogram.h"
+
 void count_defective_sweets(Mat inputImage,int &total_defective_count,int &totalNumberOfColors,vector<colorTypes> &defectivePerColor);
 void remove_white_bg(Mat img,int backgroundThreshold);
 void flood_fill(Mat img);
-vector<colorTypes>  get_distinct_colors_including_defect(Mat filteredImage,Mat inputImage,int& defect_count);
-bool is_defective(vector<Vec4i> defect,int defectDepthThreshold);
-vector<colorTypes> computeHueHistogramMaxima(Mat inputImage);
-int find_minimum_distance_match(vector<colorTypes> inputImageColorTypes,vector<colorTypes> currentContourColorType);
-vector<colorTypes>  combine_red_smarties(vector <colorTypes> finalColorTypes);
-vector<colorTypes> get_local_maxima(Mat img,int size);
-int get_min_contour_size(vector<vector<Point> > contours);
 void displayMultilpleImages(Mat* imageList,int numberOfImages);
+
+bool is_defective(vector<Vec4i> defect,int defectDepthThreshold);
+int get_min_contour_size(vector<vector<Point> > contours);
+int find_minimum_distance_match(vector<colorTypes> inputImageColorTypes,vector<colorTypes> currentContourColorType);
+
+vector<colorTypes> combine_red_smarties(vector <colorTypes> finalColorTypes);
+vector<colorTypes> get_local_maxima(Mat img,int size);
+vector<colorTypes> computeHueHistogramMaxima(Mat inputImage);
+vector<colorTypes> get_distinct_colors_including_defect(Mat filteredImage,Mat inputImage,int& defect_count);
+
+

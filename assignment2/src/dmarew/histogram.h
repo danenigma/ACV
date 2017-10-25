@@ -5,9 +5,14 @@
 
   David Vernon
   19 May 2017
- 
+
+  Modified By
+  ------------
+  Daniel Marew 
+  10/25/2017
+
 */
- 
+
 
 #include "stdio.h"
 #include "stdlib.h"
@@ -30,7 +35,7 @@
 
 using namespace std;
 using namespace cv;
-
+/*struct to hold the local maxima value (hue value) of a distinct color and its defective count*/
 struct colorTypes{
 
 	int center;

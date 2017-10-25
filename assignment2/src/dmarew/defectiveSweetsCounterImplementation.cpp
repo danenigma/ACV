@@ -1,20 +1,40 @@
+/*
+   Author
+   ------
+
+   Daniel Marew
+   10/25/2017
+
+*/
+
 #include "defectiveSweetsCounter.h"
 
 
 
-
-
-
-
+/*Implementation file for defectiveSweetsCounter.h */
 
 void count_defective_sweets(Mat inputImage,int &total_defective_count,int &totalNumberOfColors,vector<colorTypes> &defectivePerColor){
+	/*
+
+	This function counts the different sweet color types and the number of defective sweets of each 
+    color type in an image[for the Algorithm consult the interface file defectiveSweetsCounter.h]
+	===================================================================================================================
+	Input
+	----------------------
+	inputImage : Mat 
+	total_defective_count : int& for output
+	totalNumberOfColors : int& for output
+	defectivePerColor:vector<colorTypes> &
+	----------------------
+	
+	*/
    bool debug =false;
    int structuringElementSize = 5; 
    int defectiveSmartiesCount;
    int backgroundThreshold = 200;
    int gaussianKernelSize = 21;
    int gaussianStd = 1;
-   
+   /*window names */
    char inputWindowName[MAX_STRING_LENGTH]         = "Input Image";
    char histogramWindowName[MAX_STRING_LENGTH]     = "Histogram";
    char binaryWindowName[MAX_STRING_LENGTH]        = "binary Image";
@@ -63,13 +83,13 @@ void count_defective_sweets(Mat inputImage,int &total_defective_count,int &total
 	/*                                 remove red redundance                                  */
 	/*========================================================================================*/	
 	vector<colorTypes> finalColorTypesNoRedRedundance = combine_red_smarties(distinctColorsIncludingDefect);
-	/*
-	if(debug)
+
+	if(debug)//shows colours are listed in increasing hue value.
 	for (vector<colorTypes>::const_iterator i = finalColorTypesNoRedRedundance.begin(); i != finalColorTypesNoRedRedundance.end(); ++i){
 
 		cout<<"color type: "<<i->center	<<" defective count: "<<i->defective_count<<endl;
 	}
-	*/
+	
 	//returning the total number of colors and there corrosponding defective count to be displayed in the application file
 	totalNumberOfColors = (int)finalColorTypesNoRedRedundance.size();
 	total_defective_count = defectiveSmartiesCount;
@@ -116,7 +136,18 @@ void remove_white_bg(Mat img,int backgroundThreshold){
 
 }
 void flood_fill(Mat filteredImage){
-	//store copy of original image
+	/*
+	
+	This function is used for filling holes in the sweets 
+	(idea taken from online discussion forums(stackoverflow and opencv answers))
+	==========================================================
+	input:
+		filteredImage : (Mat) preprocessed binary image
+	output:
+		it modifies the input image
+	*/
+
+   //store a copy of original image
    Mat floodFillInvertedImage,floodFillImage;
    floodFillImage = filteredImage.clone();
    // floodfill the filtered image starting from the top left corner(white)
@@ -124,10 +155,23 @@ void flood_fill(Mat filteredImage){
    floodFill(floodFillImage, cv::Point(0,0), Scalar(255));
    // Invert floodFilled image so that the holes would be white
    bitwise_not(floodFillImage,floodFillInvertedImage);  
-   // if it is in either the in the inverted flood filled image(hole) or the original image = forground(255 white)
+   // if it is in either the in the inverted flood filled image(hole) or the original image = foreground(255 white)
    filteredImage = (filteredImage | floodFillInvertedImage);
 }
 bool is_defective(vector<Vec4i> contourDefects,int defectDepthThreshold){
+	/*
+	
+	this function checks whether or not a sweet is defective
+	========================================================
+	input
+	-----
+		contourDefects : (vector<Vec4i>) a vector of defects of a single sweet
+		defectDepthThreshold:(int) sweet with one or more  defect depth greater than this value is going to be cosidered defective
+	output
+	-----
+		(boolean) true if defective false otherwise
+	
+	*/
 	//for each defect in the current contour
 	for(int defect_index=0;defect_index<contourDefects.size();defect_index++){
 		//when the defect depth of the current contour is greater than the threshold stop iterating say it is defective
@@ -141,6 +185,24 @@ bool is_defective(vector<Vec4i> contourDefects,int defectDepthThreshold){
 	return false;
 }
 int find_minimum_distance_match(vector<colorTypes> inputImageColorTypes,vector<colorTypes> currentContourColorType){
+
+	/*
+
+	this function returns the index of input image local maxima (in the hue histogram) that is the closest 
+	to the current sweet contour color type (put diffently it finds the colortype of the current sweet)
+	=================================================================================================
+	input
+	-----
+		
+		inputImageColorTypes: (vector<colorTypes>) holds the centers of the local maxima of the input image hue histogram(color template)
+		currentContourColorType:(vector<colorTypes>) holds the center of the maximum of the current sweet image hue histogram
+	output
+	------
+		index(int) index in the vector inputImageColorTypes(color type)
+	
+	*/
+
+
 	//given the local maxima for the inputImage(color template) find the color template in the input histogram
 	//that is the closest to the current color type local maximum
 	int min_index = 0;
@@ -163,7 +225,16 @@ int find_minimum_distance_match(vector<colorTypes> inputImageColorTypes,vector<c
 	return min_index;
 }
 vector<colorTypes> combine_red_smarties(vector <colorTypes> finalColorTypes/*with red redundance*/){
-	//the goal of this function is to combine all the red smarties into one color type
+	/*
+	the goal of this function is to combine all the red smarties into one color type
+	================================================================================
+	input
+	-----
+		finalColorTypes:	(vector <colorTypes>) color types with red redundance (two reds typically)
+	output
+	-----
+		finalColorTypeNoRedRedundance : (vector <colorTypes>) color types without red duplicates
+	*/
 	vector<colorTypes> finalColorTypeNoRedRedundance;
 
 	int red_count = 0;
@@ -195,12 +266,34 @@ vector<colorTypes> combine_red_smarties(vector <colorTypes> finalColorTypes/*wit
 return finalColorTypeNoRedRedundance;
 }
 vector<colorTypes> get_distinct_colors_including_defect(Mat filteredImage,Mat inputImage,int& defect_count){
-	RNG rng(12345);
+	
+	/*
+	
+	This function extracts the different color types and their defective count
+	input
+	-----
+		filteredImage : (Mat) preprocessed binary image
+		defect_count  : (int&) is going to hold the total defective count
+	output
+	-----
+		(vector<colorTypes>) the different color types and their defective count
+	
+	*/
+
+
+
+
+
+
+
+
+
+
+	Mat currentSmartyImage;
+	
 	vector<vector<Point> > contours;
 	vector<Vec4i> hierarchy;
-
-       // convex cavities
-
+	/*find the contours*/
 	findContours(filteredImage, contours, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE, Point(0, 0) );
 
 	vector<Rect>   min_bounding_rectangle(contours.size()); ;
@@ -209,30 +302,41 @@ vector<colorTypes> get_distinct_colors_including_defect(Mat filteredImage,Mat in
 	vector<Vec4i> convexity_defects(contours.size()); 
 
 	vector<colorTypes> inputImageColorTypes,currentContourColorType;
+	
 	int histogramTheshold = 80;
-	double minHistogramFactor = 0.05;
-	if (!contours.empty())		
-		histogramTheshold = get_min_contour_size(contours)*minHistogramFactor;
-
-	inputImageColorTypes = computeHueHistogramMaxima(inputImage,histogramTheshold);
-	//cout<<"Histogram Threshold: "<<histogramTheshold<<endl;
-	Mat currentSmartyImage;
 	int currentSmartyColorIndex;
 	int total_defective_count = 0;
 	int contour_noise_threshold = 10;
+	int isDefectiveThreshold = 1000;
+	double minHistogramFactor = 0.05;//5% of the smallest area contour
+	/*if contour is not empty get the area of the smallest contour for histogram threshold selection*/
+	if (!contours.empty())		
+		histogramTheshold = get_min_contour_size(contours)*minHistogramFactor;
+	/*compute the hue histogram of the input image (color template)*/
+	inputImageColorTypes = computeHueHistogramMaxima(inputImage,histogramTheshold);
+	
+	
+	/*for each contour with size >threshold */
 	for (int contour_number=0; (contour_number<(int)contours.size()); contour_number++) {
 		if (contours[contour_number].size() > contour_noise_threshold) {
-
+			/*get the minimum bounding box*/
 			min_bounding_rectangle[contour_number] = boundingRect(contours[contour_number]);
+			/*get the convex hull*/
 			convexHull(contours[contour_number], hulls[contour_number]);
 			convexHull(contours[contour_number], hull_indices[contour_number]);
+			/*get the convexity defects for the current contour*/
 			convexityDefects( contours[contour_number], hull_indices[contour_number], convexity_defects);
+			/*creat an ROI image for the current sweet*/
 			currentSmartyImage = inputImage(min_bounding_rectangle[contour_number]);
+			/*compute its hue histogram*/
 			currentContourColorType = computeHueHistogramMaxima(currentSmartyImage,histogramTheshold);
+			/*compare with the template and get the right color type of the current sweet*/
 			currentSmartyColorIndex = find_minimum_distance_match(inputImageColorTypes,currentContourColorType);
-			//cout<<"current smarty is of color: "<<inputImageColorTypes[currentSmartyColorIndex].center<<endl;
-			if (is_defective(convexity_defects,1000)){
+			/*check if it is defective*/
+			if (is_defective(convexity_defects,isDefectiveThreshold)){
+				/*if defective increment the number of defects in the colortype of the current sweet*/
 				inputImageColorTypes[currentSmartyColorIndex].defective_count =inputImageColorTypes[currentSmartyColorIndex].defective_count+1;
+				/*increment the total defective count*/
 				total_defective_count++;
 			}
 		}
@@ -241,50 +345,74 @@ vector<colorTypes> get_distinct_colors_including_defect(Mat filteredImage,Mat in
 	return inputImageColorTypes;
 
 }
-vector<colorTypes> get_local_maxima(Mat img,int size){
-	/*This function extracts the local maxima in img with in a window of size (size x size)*/
+vector<colorTypes> get_local_maxima(Mat histogram,int size){
+	/*
+	
+	This function extracts the local maxima in a histogram with in a window of size (size)
+	====================================================================================
+	input
+	-----
+		histogram: (Mat)
+		size: (int) size of window we are going to look for a local maxima
+	output
+	-----
+		(vector<colorTypes>) vector of the color type centers(local maxima)
+	
+	
+	
+	*/
 	bool debug = false;
 	vector<colorTypes> colors;
 	Mat localMaximizedImage;
 	Mat temp; 
-	if(debug)cout<<"histsize"<<img.size()<<endl;
+	Mat product;
+	Mat histogramCopy;
+	Mat nonZeroCoordinates;
 	//structuring element
 	Mat dilationElement = getStructuringElement(MORPH_RECT,Size(1,size));
-	if(debug)cout<<"kernel size"<<dilationElement.size()<<endl;
 	//dilate the image with rectangular kernel
 	//results in a image where each point will have the value of local maxima in the window
-	dilate(img,localMaximizedImage,dilationElement);
+	dilate(histogram,localMaximizedImage,dilationElement);
 	//compare localMaximizedImage and the original image
 	//local maxima are pixels that have the same values in both images
 	//problem the background pixels will have the same values in both images
-	compare(img,localMaximizedImage,temp,CV_CMP_EQ);
-    if(debug)imshow("temp",temp);
-	//to remove the background pixels from local maxima image 
+	compare(histogram,localMaximizedImage,temp,CV_CMP_EQ);
+    //to remove the background pixels from local maxima image 
 	//we multiply it with the original image(so that 1./255*bgpixel(0)=0)
-	Mat prod;
-	if(debug)cout<<"temp: "<<temp<<endl;
-	if(debug)cout<<"img type: "<<img.type()<<endl;
-	Mat imgcopy;
-	img.convertTo(imgcopy,CV_8UC3);
-	
-	if(debug)cout<<imgcopy<<endl;
-	multiply(imgcopy,temp,prod);
-	//here we are left with only the local maxima.
-	if(debug)imshow("product",prod);
-	Mat nonZeroCoordinates;
-	findNonZero(prod, nonZeroCoordinates);
 
+	histogram.convertTo(histogramCopy,CV_8UC3);//we don't to modify the original hist
+	
+	multiply(histogramCopy,temp,product);
+	//here we are left with only the local maxima.
+	//find non zero pixels(local maxima(color type modes in the histogram))
+	findNonZero(product, nonZeroCoordinates);
+	//push each local maxima to color type vector
     for (int i = 0; i < nonZeroCoordinates.total(); i++ ) {
         if(debug)cout << "Zero#" << i << ": " << nonZeroCoordinates.at<Point>(i).x << ", " << nonZeroCoordinates.at<Point>(i).y << endl;
 		colorTypes c;
 		c.center = nonZeroCoordinates.at<Point>(i).y;
-		c.defective_count = 0;
+		c.defective_count = 0;//default value
 		colors.push_back(c);
 	}
 
 	return colors;
 }
 int get_min_contour_size(vector<vector<Point> > contours){
+ /*
+ 
+ this function returns the area(approx number of pixels. since opencv uses greens theorem 
+ they are not equal but good enough approximation)
+
+ input
+ -----
+	contours: (vector<vector<Point> > ) a list of contours 
+ output
+ -----
+	(int) the area of the smallest contour 
+ 
+ 
+ 
+ */
 
   int smallest_contour_area=contourArea( contours[0],false);
   double current_contour_area;

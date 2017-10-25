@@ -1,4 +1,4 @@
-﻿Build started 10/24/2017 2:38:08 PM.
+﻿Build started 10/25/2017 12:48:30 PM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment2\build\src\firstAttempt\firstAttempt.vcxproj" on node 2 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "firstAttempt.dir\Release\firstAttempt.lastbuildstate".
@@ -30,4 +30,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.77
+Time Elapsed 00:00:03.68

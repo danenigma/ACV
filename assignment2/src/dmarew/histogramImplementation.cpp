@@ -6,6 +6,14 @@
   David Vernon
   19 May 2017
 
+  Modified to compute the hue histogram and count the number of different color types in an image
+  -----------------------------------------------------------------------------------------------
+  
+  Implementation file
+  
+  Daniel Marew
+  10/25/2017
+
 */
  
 #include "defectiveSweetsCounter.h"
@@ -17,7 +25,7 @@
  * by Kenneth Dawson-Howe © Wiley & Sons Inc. 2014.  All rights reserved.
  */
 
-//#include "Utilities.h"
+
 
 class Histogram
 {
@@ -95,14 +103,14 @@ private:
 
 public:
 	HueHistogram( Mat image, int number_of_bins, int min_saturation=DEFAULT_MIN_SATURATION, int min_value=DEFAULT_MIN_VALUE, 
-		int max_value=DEFAULT_MAX_VALUE, int min_histogram_threshold = DEFAULT_FREQTHRESHOLD_VALUE ) :
+		int max_value=DEFAULT_MAX_VALUE, int min_histogram_threshold = DEFAULT_FREQTHRESHOLD_VALUE /*daniel marew*/) :
 	  Histogram( image, number_of_bins )
 	{
 		mMinimumSaturation = min_saturation;
 		mMinimumValue = min_value;
 		mMaximumValue = max_value;
 		mChannelRange[1] = 180.0;
-		mHistogramFreqThreshold = min_histogram_threshold;
+		mHistogramFreqThreshold = min_histogram_threshold;/*Daniel Marew*/
 		ComputeHistogram();
 	}
 	void ComputeHistogram()
@@ -115,24 +123,42 @@ public:
 		mixChannels( &hsv_image, 1, &hue_image, 1, channels, 1 );
 		const float* channel_ranges = mChannelRange;
 		calcHist( &hue_image,1,0,mask_image,mHistogram,1,mNumberBins,&channel_ranges);
-	
+	    /**********************************Daniel Marew ********************************/
+		/*******************************************************************************/
+		/*               Bluring to remove noise in the histogram                      */
+		/*******************************************************************************/
+		//for histogram display
 		Draw(originalHistogram);	
+		//kernel size
 		Size gaussianKernelSize(7,7);
+		//gaussian blur
 		GaussianBlur(mHistogram, mHistogram,gaussianKernelSize,0,0);
+		//for histogram display
 		Draw(bluredHistogram);
-		
-		//chop off histogram below 5% of maximum value
+		/**********************************Daniel Marew ********************************/
+		/*******************************************************************************/
+		/*			  chop off parts of histogram less than  mHistogramFreqThreshold   */
+		/*******************************************************************************/
 		
 		Mat maskImage;
 		double min,max;
+		/*get the maximum value in the histogram*/
 		minMaxLoc(mHistogram,&min,&max);
+		
 		//double minHistogramFactor = 0.05; //5% of the maximum
-		//cout<<"from histogram maxima: "<<max*minHistogramFactor<<endl;
+		//cout<<"from histogram maxima: "<<max*minHistogramFactor<<endl;/*old implementation*/
+
+		/*create a mask (mHistogramFreqThreshold - maximum value in threshold)*/
 		inRange(mHistogram, Scalar(mHistogramFreqThreshold/*max*minHistogramFactor*/), Scalar(max),maskImage);
+		/*convert it to float image*/
 		maskImage.convertTo(maskImage,CV_32FC1);
+		/*normalize it between 0-1*/
 		normalize(maskImage,maskImage,0,1,CV_MINMAX);
+		/*multiply the original histogram with the mask)*/
 		multiply(mHistogram,maskImage,mHistogram);
+		/*for display only*/
 		Draw(thresholdedHistogram);
+		/*display the 3 histograms in one image*/
 	    Mat imageList[] = {originalHistogram,bluredHistogram,thresholdedHistogram};
 		displayMultilpleImages(imageList,3);
 		
@@ -159,27 +185,48 @@ public:
 		Draw1DHistogram( &mHistogram, 1, display_image );
 
 	}
+	/*Daniel Marew*/
 	vector<colorTypes> get_color_types(){
-
+		/*returns the local maxima as avector of the colorType struct*/
 		vector<colorTypes>colorHistogramMaxima;
-		colorHistogramMaxima = get_local_maxima(mHistogram.clone(),8);
+		int localMaximaDecisionArea = 8;
+		colorHistogramMaxima = get_local_maxima(mHistogram.clone(),localMaximaDecisionArea);
 		return colorHistogramMaxima;
 	}
 };
+/*Daniel Marew*/
 vector<colorTypes> computeHueHistogramMaxima(Mat inputImage,int min_histogram_threshold){
+	/*
+	
+	this function returns the hue histogram local maxima (distinct color types)
+	
+	input
+	-----
+		inputImage - (Mat) original Image
+		min_histogram_threshold - (int) threshold for chopping of the histogram
+	output
+	------
+		distinctColorTypes - vector<colorTypes> distinct color types
+	
+
+	
+	*/
+
 	bool debug  = false;
 	Mat display_image;
+	vector<colorTypes> distinctColorTypes;
 	HueHistogram hh(inputImage,255,30,5,255,min_histogram_threshold);
 	hh.NormaliseHistogram();
 	hh.Draw(display_image);
 	if(debug)imshow("Final Hue Histogram",display_image);
-	
-	return hh.get_color_types();
+	/*get the distinct color types */
+	distinctColorTypes = hh.get_color_types();
+	return distinctColorTypes;
 	
 }
 /************************************************************************************************************/
 
-/* Example Code */
+
 /* David Vernon */
 
 /*=======================================================*/

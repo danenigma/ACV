@@ -1,10 +1,11 @@
 /* 
-  Example use of openCV to generate a histogram of an image
+   defectiveSweetsCounterApplication.cpp - Application file for a program that counts the different sweet colors
+   and the number of defective sweets of each color type in an image
   ---------------------------------------------------------
   Application file (i.e. main)
 
-  David Vernon
-  19 May 2017
+  Daniel Marew
+  10/25/2017
   
 */
 #include "defectiveSweetsCounter.h"
@@ -17,7 +18,7 @@ int main() {
    char filename[MAX_FILENAME_LENGTH];
    Mat inputImage;
    FILE *fp_in,*fp_out;
-   //FILE *fp_out;
+   
    
    if ((fp_in = fopen("../data/input.txt","r")) == 0) {
 	  printf("Error can't open input histogramInput.txt\n");
@@ -46,13 +47,15 @@ int main() {
          }
 		 int totalDefectiveCount,totalNumberOfColors;
 		 vector<colorTypes> defectivePerColor;
+		 /*get the number of defective sweets by color*/
 		 count_defective_sweets(inputImage,totalDefectiveCount,totalNumberOfColors,defectivePerColor);
 		 int samplearray[3] = {1,2,3};
 		 stringstream ss;
-		 ss << filename <<" "<<totalDefectiveCount<<" defective sweets, "<<totalNumberOfColors<<" colours, ";
+		 ss << filename <<" "<<totalDefectiveCount<<" defective sweets, "<<totalNumberOfColors<<" colours: ";
 		 for (int color_number=0; (color_number<(int)defectivePerColor.size());color_number++)
 			 ss<<((int)defectivePerColor[color_number].defective_count)<<" ";
 		 ss<<"defects per colour";
+		 /*write to file*/
 		 fprintf(fp_out,"%s\n",ss.str());
 		 cout<<ss.str()<<endl;
 		 do{
