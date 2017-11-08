@@ -3,3 +3,4 @@
 ../data/test1.png
 ../data/test2.png
 ../data/test3.png
+../data/test4.png

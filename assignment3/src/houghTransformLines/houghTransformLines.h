@@ -19,6 +19,8 @@
 #include <conio.h>
 #include <cmath>
 
+#include <algorithm> // for std::find
+#include <iterator> // for std::begin, std::end
 //opencv
 #include <cv.h>
 #include <highgui.h>
@@ -42,4 +44,7 @@ void get_center(vector<Vec2f> lines);
 void create_histogram_of_lines(vector<float> lineOrientation);
 int find_perpendicular(int indexOfCurrent,vector<Vec2f> lines,int parLineIndex,int distance,vector<Vec2f>&validLines);
 float computeDistanceBetweenLines(Vec2f line1,Vec2f line2);
-vector<Vec2f> get_the_four_main_lines(vector<Vec2f> lines);
+void get_the_four_main_lines(vector<Vec2f> lines,int mainLineIndices[]);
+void get_center_and_pos(vector<Vec2i> bestLines,float& pos,Point& center,Point intersectionPoints[]);
+Point get_intersection_point(Vec2i line1,Vec2i line2);
+bool is_valid(float a);

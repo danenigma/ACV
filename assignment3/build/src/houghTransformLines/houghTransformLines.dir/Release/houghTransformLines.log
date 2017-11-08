@@ -1,4 +1,4 @@
-﻿Build started 11/7/2017 3:32:37 PM.
+﻿Build started 11/8/2017 3:25:51 PM.
      1>Project "C:\ACV\assignments\ACV-assignments\assignment3\build\src\houghTransformLines\houghTransformLines.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "houghTransformLines.dir\Release\houghTransformLines.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -7,21 +7,68 @@
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\opencv\build\include /IC:\opencv\build\include\opencv /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_DEPRECATE /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"houghTransformLines.dir\Release\\" /Fd"houghTransformLines.dir\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp
          houghTransformLineImplementation.cpp
-     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(97): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(169): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(169): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(178): warning C4305: 'initializing' : truncation from 'double' to 'const float'
-     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(182): warning C4018: '<' : signed/unsigned mismatch
-     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(188): warning C4018: '<' : signed/unsigned mismatch
-     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(193): warning C4101: 'currentLineTheta' : unreferenced local variable
-     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(193): warning C4101: 'y0' : unreferenced local variable
-     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(193): warning C4101: 'a' : unreferenced local variable
-     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(193): warning C4101: 'currentLineRho' : unreferenced local variable
-     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(193): warning C4101: 'b' : unreferenced local variable
-     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(193): warning C4101: 'rho' : unreferenced local variable
-     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(193): warning C4101: 'x0' : unreferenced local variable
-     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(193): warning C4101: 'theta' : unreferenced local variable
-     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(216): warning C4244: 'argument' : conversion from 'float' to 'unsigned int', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(81): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(81): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(117): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(117): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(127): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(136): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(137): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(85): warning C4101: 'intercept' : unreferenced local variable
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(85): warning C4101: 'm' : unreferenced local variable
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(203): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(203): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(212): warning C4305: 'initializing' : truncation from 'double' to 'const float'
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(216): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(222): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(229): warning C4101: 'currentLineTheta' : unreferenced local variable
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(229): warning C4101: 'y0' : unreferenced local variable
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(229): warning C4101: 'a' : unreferenced local variable
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(229): warning C4101: 'currentLineRho' : unreferenced local variable
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(229): warning C4101: 'b' : unreferenced local variable
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(229): warning C4101: 'rho' : unreferenced local variable
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(229): warning C4101: 'x0' : unreferenced local variable
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(229): warning C4101: 'theta' : unreferenced local variable
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(309): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(315): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(315): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(316): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(317): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(317): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(317): warning C4804: '~' : unsafe use of type 'bool' in operation
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(318): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(319): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(319): warning C4804: '~' : unsafe use of type 'bool' in operation
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(319): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(320): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(321): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(321): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(322): warning C4244: '=' : conversion from 'const int' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(323): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(323): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(323): warning C4804: '~' : unsafe use of type 'bool' in operation
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(324): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(325): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(325): warning C4804: '~' : unsafe use of type 'bool' in operation
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(325): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(326): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(337): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(338): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(339): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(340): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(345): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(346): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(350): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(351): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(352): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(354): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(355): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(360): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(361): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(362): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(364): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\src\houghTransformLines\houghTransformLineImplementation.cpp(365): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\acv\assignments\acv-assignments\assignment3\src\houghtransformlines\houghtransformlineimplementation.cpp(311): warning C4700: uninitialized local variable 'validLinePoseSum' used
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\ACV\assignments\ACV-assignments\assignment3\build\Release\houghTransformLines.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib C:\opencv\build\x86\vc10\lib\opencv_videostab2410.lib C:\opencv\build\x86\vc10\lib\opencv_ts2410.lib C:\opencv\build\x86\vc10\lib\opencv_superres2410.lib C:\opencv\build\x86\vc10\lib\opencv_stitching2410.lib C:\opencv\build\x86\vc10\lib\opencv_contrib2410.lib C:\opencv\build\x86\vc10\lib\opencv_nonfree2410.lib C:\opencv\build\x86\vc10\lib\opencv_ocl2410.lib C:\opencv\build\x86\vc10\lib\opencv_gpu2410.lib C:\opencv\build\x86\vc10\lib\opencv_photo2410.lib C:\opencv\build\x86\vc10\lib\opencv_objdetect2410.lib C:\opencv\build\x86\vc10\lib\opencv_legacy2410.lib C:\opencv\build\x86\vc10\lib\opencv_video2410.lib C:\opencv\build\x86\vc10\lib\opencv_ml2410.lib C:\opencv\build\x86\vc10\lib\opencv_calib3d2410.lib C:\opencv\build\x86\vc10\lib\opencv_features2d2410.lib C:\opencv\build\x86\vc10\lib\opencv_highgui2410.lib C:\opencv\build\x86\vc10\lib\opencv_imgproc2410.lib C:\opencv\build\x86\vc10\lib\opencv_flann2410.lib C:\opencv\build\x86\vc10\lib\opencv_core2410.lib /NODEFAULTLIB:"libc;libcmt.lib;libcmtd.lib" /MANIFEST /ManifestFile:"houghTransformLines.dir\Release\houghTransformLines.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:/ACV/assignments/ACV-assignments/assignment3/build/Release/houghTransformLines.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/ACV/assignments/ACV-assignments/assignment3/build/Release/houghTransformLines.lib" /MACHINE:X86 houghTransformLines.dir\Release\houghTransformLineImplementation.obj
          houghTransformLines.dir\Release\houghTransformLinesApplication.obj  /machine:X86 
@@ -35,4 +82,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.37
+Time Elapsed 00:00:01.36
