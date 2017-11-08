@@ -1,0 +1,5 @@
+../data/assignment3A.png
+../data/assignment3B.png
+../data/test1.png
+../data/test2.png
+../data/test3.png
