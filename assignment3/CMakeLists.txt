@@ -11,7 +11,7 @@ cmake_minimum_required(VERSION 2.4)
 ENDIF(WIN32)
 
 ##############################################
-PROJECT(assignment1)
+PROJECT(assignment3)
 ##############################################
 
 SET(NESTED_BUILD TRUE)

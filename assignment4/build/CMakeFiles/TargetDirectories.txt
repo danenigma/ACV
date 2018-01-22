@@ -1,0 +1,7 @@
+C:/ACV/assignments/ACV-assignments/assignment4/build/CMakeFiles/INSTALL.dir
+C:/ACV/assignments/ACV-assignments/assignment4/build/CMakeFiles/ALL_BUILD.dir
+C:/ACV/assignments/ACV-assignments/assignment4/build/CMakeFiles/ZERO_CHECK.dir
+C:/ACV/assignments/ACV-assignments/assignment4/build/src/CMakeFiles/INSTALL.dir
+C:/ACV/assignments/ACV-assignments/assignment4/build/src/grabCutFaceDetection/CMakeFiles/grabCut.dir
+C:/ACV/assignments/ACV-assignments/assignment4/build/src/grabCutFaceDetection/CMakeFiles/INSTALL.dir
+C:/ACV/assignments/ACV-assignments/assignment4/build/src/grabCutFaceDetection/CMakeFiles/ALL_BUILD.dir

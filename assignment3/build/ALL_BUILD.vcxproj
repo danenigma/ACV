@@ -161,6 +161,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment3/build/ZERO_CHECK.vcxproj">
       <Project>6659A8D4-D72A-32E7-80B2-4E6F28C53079</Project>
     </ProjectReference>
+    <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment3/build/src/dmarew/dmarew.vcxproj">
+      <Project>4012D70A-97A5-37B8-964F-903A6D29DFCE</Project>
+    </ProjectReference>
     <ProjectReference Include="C:/ACV/assignments/ACV-assignments/assignment3/build/src/houghTransformLines/houghTransformLines.vcxproj">
       <Project>053B6615-3142-3E1B-9454-2F1B257DE08A</Project>
     </ProjectReference>

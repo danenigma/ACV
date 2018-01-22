@@ -94,7 +94,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=/INCREMENTAL:NO
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=assignment1
+CMAKE_PROJECT_NAME:STATIC=assignment3
 
 //RC compiler
 CMAKE_RC_COMPILER:FILEPATH=rc
@@ -167,10 +167,16 @@ OpenCV_LIB_DIR_DBG:PATH=C:/opencv/build/x86/vc10/lib
 OpenCV_LIB_DIR_OPT:PATH=C:/opencv/build/x86/vc10/lib
 
 //Value Computed by CMake
-assignment1_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment3/build
+assignment3_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment3/build
 
 //Value Computed by CMake
-assignment1_SOURCE_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment3
+assignment3_SOURCE_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment3
+
+//Value Computed by CMake
+dmarew_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment3/build/src/dmarew
+
+//Value Computed by CMake
+dmarew_SOURCE_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment3/src/dmarew
 
 //Value Computed by CMake
 houghTransformLines_BINARY_DIR:STATIC=C:/ACV/assignments/ACV-assignments/assignment3/build/src/houghTransformLines
@@ -257,7 +263,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_RC_COMPILER
 CMAKE_RC_COMPILER-ADVANCED:INTERNAL=1
 CMAKE_RC_COMPILER_WORKS:INTERNAL=1
