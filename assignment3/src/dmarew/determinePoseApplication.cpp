@@ -1,17 +1,12 @@
 /* 
-  Example use of openCV to use the Hough Transform
-  ------------------------------------------------
-  Application file (i.e. main)
 
- 
-  David Vernon
-  14 Feburary 2017
+  Daniel Marew
+  11/18/2017
 
 */
  
 #include "determinePose.h"
 
-// Global variables to allow access by the display window callback functions
 
 
 
